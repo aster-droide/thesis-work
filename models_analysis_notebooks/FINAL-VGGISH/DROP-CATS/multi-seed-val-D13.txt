@@ -1,0 +1,4011 @@
+outer_fold 1
+Train Set Group Distribution:
+046A    63
+000A    39
+002B    32
+047A    28
+074A    25
+        ..
+066A     1
+091A     1
+043A     1
+049A     1
+090A     1
+Name: cat_id, Length: 85, dtype: int64
+Testing Set Group Distribution:
+103A    33
+057A    27
+020A    23
+101A    15
+097B    14
+059A    14
+001A    14
+068A    11
+040A    10
+005A    10
+016A    10
+015A     9
+072A     9
+010A     8
+099A     7
+053A     6
+009A     4
+058A     3
+060A     3
+054A     2
+092A     1
+048A     1
+004A     1
+024A     1
+026B     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+X    257
+M    213
+F    209
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+M    124
+X     77
+F     36
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 000A, 033A, 071A, 028A, 019A, 074A, 067...
+kitten    [044A, 014B, 111A, 046A, 047A, 109A, 050A, 043...
+senior    [093A, 097A, 106A, 104A, 055A, 113A, 116A, 051...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [015A, 001A, 103A, 097B, 020A, 101A, 005A, 072...
+kitten                                         [040A, 048A]
+senior                 [057A, 059A, 054A, 058A, 016A, 024A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 57, 'kitten': 13, 'senior': 15}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 17, 'kitten': 2, 'senior': 6}
+Unique Training/Validation Group IDs:
+['000A' '000B' '002A' '002B' '003A' '006A' '007A' '008A' '011A' '012A'
+ '013B' '014A' '014B' '018A' '019A' '019B' '021A' '022A' '023A' '023B'
+ '025A' '025B' '025C' '026A' '026C' '027A' '028A' '029A' '031A' '032A'
+ '033A' '034A' '035A' '036A' '037A' '038A' '039A' '041A' '043A' '044A'
+ '045A' '046A' '047A' '049A' '050A' '051A' '051B' '052A' '055A' '056A'
+ '061A' '062A' '063A' '064A' '065A' '066A' '067A' '069A' '070A' '071A'
+ '073A' '074A' '075A' '076A' '087A' '088A' '090A' '091A' '093A' '094A'
+ '095A' '096A' '097A' '100A' '102A' '104A' '105A' '106A' '108A' '109A'
+ '110A' '111A' '113A' '115A' '116A']
+Unique Test Group IDs:
+['001A' '004A' '005A' '009A' '010A' '015A' '016A' '020A' '024A' '026B'
+ '040A' '048A' '053A' '054A' '057A' '058A' '059A' '060A' '068A' '072A'
+ '092A' '097B' '099A' '101A' '103A']
+Moved to Training/Validation Set:
+set()
+Removed from Training/Validation Set:
+set()
+Moved to Test Set:
+set()
+Removed from Test Set
+set()
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '002A' '002B' '003A' '006A' '007A' '008A' '011A' '012A'
+ '013B' '014A' '014B' '018A' '019A' '019B' '021A' '022A' '023A' '023B'
+ '025A' '025B' '025C' '026A' '026C' '027A' '028A' '029A' '031A' '032A'
+ '033A' '034A' '035A' '036A' '037A' '038A' '039A' '041A' '043A' '044A'
+ '045A' '046A' '047A' '049A' '050A' '051A' '051B' '052A' '055A' '056A'
+ '061A' '062A' '063A' '064A' '065A' '066A' '067A' '069A' '070A' '071A'
+ '073A' '074A' '075A' '076A' '087A' '088A' '090A' '091A' '093A' '094A'
+ '095A' '096A' '097A' '100A' '102A' '104A' '105A' '106A' '108A' '109A'
+ '110A' '111A' '113A' '115A' '116A']
+AFTER SWAP - Unique Test Group IDs:
+['001A' '004A' '005A' '009A' '010A' '015A' '016A' '020A' '024A' '026B'
+ '040A' '048A' '053A' '054A' '057A' '058A' '059A' '060A' '068A' '072A'
+ '092A' '097B' '099A' '101A' '103A']
+Length of X_train_val:
+679
+Length of y_train_val:
+679
+Length of groups_train_val:
+679
+Train Age Group Distribution BEFORE SWAP:
+adult     419
+kitten    146
+senior    114
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     169
+senior     57
+kitten     11
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     419
+kitten    146
+senior    114
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     169
+senior     57
+kitten     11
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.72 (18/25)
+Final Test Results - Loss: 1.417489767074585, Accuracy: 0.6540084481239319, Precision: 0.5818944493220174, Recall: 0.685915523972204, F1 Score: 0.6209510452147198
+Confusion Matrix:
+ [[120   7  42]
+ [  1  10   0]
+ [ 32   0  25]]
+outer_fold 2
+Train Set Group Distribution:
+046A    63
+000A    39
+103A    33
+002B    32
+057A    27
+        ..
+041A     1
+092A     1
+076A     1
+096A     1
+026B     1
+Name: cat_id, Length: 81, dtype: int64
+Testing Set Group Distribution:
+047A    28
+067A    19
+097A    16
+028A    13
+039A    12
+116A    12
+063A    11
+045A     9
+033A     9
+022A     9
+094A     8
+027A     7
+108A     6
+070A     5
+025C     5
+104A     4
+062A     4
+105A     4
+012A     3
+113A     3
+014A     3
+011A     2
+061A     2
+102A     2
+049A     1
+026C     1
+091A     1
+088A     1
+019B     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+M    276
+X    252
+F    187
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+X    82
+M    61
+F    58
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 000A, 015A, 001A, 103A, 071A, 097B, 019...
+kitten    [044A, 014B, 111A, 040A, 046A, 109A, 050A, 043...
+senior    [093A, 057A, 106A, 055A, 059A, 051B, 054A, 056...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [033A, 028A, 067A, 062A, 022A, 091A, 039A, 063...
+kitten                                   [047A, 049A, 045A]
+senior     [097A, 104A, 113A, 116A, 094A, 108A, 011A, 061A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 56, 'kitten': 12, 'senior': 13}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 18, 'kitten': 3, 'senior': 8}
+Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002A' '002B' '003A' '004A' '005A' '006A' '007A'
+ '008A' '009A' '010A' '013B' '014B' '015A' '016A' '018A' '019A' '020A'
+ '021A' '023A' '023B' '024A' '025A' '025B' '026A' '026B' '029A' '031A'
+ '032A' '034A' '035A' '036A' '037A' '038A' '040A' '041A' '043A' '044A'
+ '046A' '048A' '050A' '051A' '051B' '052A' '053A' '054A' '055A' '056A'
+ '057A' '058A' '059A' '060A' '064A' '065A' '066A' '068A' '069A' '071A'
+ '072A' '073A' '074A' '075A' '076A' '087A' '090A' '092A' '093A' '095A'
+ '096A' '097B' '099A' '100A' '101A' '103A' '106A' '109A' '110A' '111A'
+ '115A']
+Unique Test Group IDs:
+['011A' '012A' '014A' '019B' '022A' '025C' '026C' '027A' '028A' '033A'
+ '039A' '045A' '047A' '049A' '061A' '062A' '063A' '067A' '070A' '088A'
+ '091A' '094A' '097A' '102A' '104A' '105A' '108A' '113A' '116A']
+Moved to Training/Validation Set:
+set()
+Removed from Training/Validation Set:
+set()
+Moved to Test Set:
+set()
+Removed from Test Set
+set()
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002A' '002B' '003A' '004A' '005A' '006A' '007A'
+ '008A' '009A' '010A' '013B' '014B' '015A' '016A' '018A' '019A' '020A'
+ '021A' '023A' '023B' '024A' '025A' '025B' '026A' '026B' '029A' '031A'
+ '032A' '034A' '035A' '036A' '037A' '038A' '040A' '041A' '043A' '044A'
+ '046A' '048A' '050A' '051A' '051B' '052A' '053A' '054A' '055A' '056A'
+ '057A' '058A' '059A' '060A' '064A' '065A' '066A' '068A' '069A' '071A'
+ '072A' '073A' '074A' '075A' '076A' '087A' '090A' '092A' '093A' '095A'
+ '096A' '097B' '099A' '100A' '101A' '103A' '106A' '109A' '110A' '111A'
+ '115A']
+AFTER SWAP - Unique Test Group IDs:
+['011A' '012A' '014A' '019B' '022A' '025C' '026C' '027A' '028A' '033A'
+ '039A' '045A' '047A' '049A' '061A' '062A' '063A' '067A' '070A' '088A'
+ '091A' '094A' '097A' '102A' '104A' '105A' '108A' '113A' '116A']
+Length of X_train_val:
+715
+Length of y_train_val:
+715
+Length of groups_train_val:
+715
+Train Age Group Distribution BEFORE SWAP:
+adult     478
+kitten    119
+senior    118
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     110
+senior     53
+kitten     38
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     478
+kitten    119
+senior    118
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     110
+senior     53
+kitten     38
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.79 (23/29)
+Final Test Results - Loss: 0.6096699833869934, Accuracy: 0.7412935495376587, Precision: 0.7394794174979934, Recall: 0.726345881857302, F1 Score: 0.7325636075636076
+Confusion Matrix:
+ [[86  8 16]
+ [10 28  0]
+ [18  0 35]]
+outer_fold 3
+Train Set Group Distribution:
+046A    63
+103A    33
+002B    32
+047A    28
+057A    27
+        ..
+048A     1
+096A     1
+043A     1
+026C     1
+026B     1
+Name: cat_id, Length: 82, dtype: int64
+Testing Set Group Distribution:
+000A    39
+074A    25
+000B    19
+019A    17
+029A    17
+002A    13
+111A    13
+036A    11
+071A    10
+051B     9
+065A     9
+095A     8
+050A     7
+037A     6
+109A     6
+034A     5
+003A     4
+026A     4
+056A     3
+006A     3
+032A     2
+025B     2
+076A     1
+073A     1
+041A     1
+066A     1
+110A     1
+090A     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+M    269
+X    251
+F    158
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+F    87
+X    83
+M    68
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [033A, 015A, 001A, 103A, 097B, 028A, 067A, 020...
+kitten    [044A, 014B, 040A, 046A, 047A, 043A, 049A, 045...
+senior    [093A, 097A, 057A, 106A, 104A, 055A, 059A, 113...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [006A, 000A, 071A, 019A, 074A, 029A, 095A, 034...
+kitten                       [111A, 109A, 050A, 041A, 110A]
+senior                                   [051B, 056A, 090A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 54, 'kitten': 10, 'senior': 18}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 20, 'kitten': 5, 'senior': 3}
+Unique Training/Validation Group IDs:
+['001A' '002B' '004A' '005A' '007A' '008A' '009A' '010A' '011A' '012A'
+ '013B' '014A' '014B' '015A' '016A' '018A' '019B' '020A' '021A' '022A'
+ '023A' '023B' '024A' '025A' '025C' '026B' '026C' '027A' '028A' '031A'
+ '033A' '035A' '038A' '039A' '040A' '043A' '044A' '045A' '046A' '047A'
+ '048A' '049A' '051A' '052A' '053A' '054A' '055A' '057A' '058A' '059A'
+ '060A' '061A' '062A' '063A' '064A' '067A' '068A' '069A' '070A' '072A'
+ '075A' '087A' '088A' '091A' '092A' '093A' '094A' '096A' '097A' '097B'
+ '099A' '100A' '101A' '102A' '103A' '104A' '105A' '106A' '108A' '113A'
+ '115A' '116A']
+Unique Test Group IDs:
+['000A' '000B' '002A' '003A' '006A' '019A' '025B' '026A' '029A' '032A'
+ '034A' '036A' '037A' '041A' '050A' '051B' '056A' '065A' '066A' '071A'
+ '073A' '074A' '076A' '090A' '095A' '109A' '110A' '111A']
+Moved to Training/Validation Set:
+{'000A'}
+Removed from Training/Validation Set:
+{'025A'}
+Moved to Test Set:
+{'025A'}
+Removed from Test Set
+{'000A'}
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '001A' '002B' '004A' '005A' '007A' '008A' '009A' '010A' '011A'
+ '012A' '013B' '014A' '014B' '015A' '016A' '018A' '019B' '020A' '021A'
+ '022A' '023A' '023B' '024A' '025C' '026B' '026C' '027A' '028A' '031A'
+ '033A' '035A' '038A' '039A' '040A' '043A' '044A' '045A' '046A' '047A'
+ '048A' '049A' '051A' '052A' '053A' '054A' '055A' '057A' '058A' '059A'
+ '060A' '061A' '062A' '063A' '064A' '067A' '068A' '069A' '070A' '072A'
+ '075A' '087A' '088A' '091A' '092A' '093A' '094A' '096A' '097A' '097B'
+ '099A' '100A' '101A' '102A' '103A' '104A' '105A' '106A' '108A' '113A'
+ '115A' '116A']
+AFTER SWAP - Unique Test Group IDs:
+['000B' '002A' '003A' '006A' '019A' '025A' '025B' '026A' '029A' '032A'
+ '034A' '036A' '037A' '041A' '050A' '051B' '056A' '065A' '066A' '071A'
+ '073A' '074A' '076A' '090A' '095A' '109A' '110A' '111A']
+Length of X_train_val:
+706
+Length of y_train_val:
+706
+Length of groups_train_val:
+706
+Train Age Group Distribution BEFORE SWAP:
+adult     391
+senior    158
+kitten    129
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     197
+kitten     28
+senior     13
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     419
+senior    158
+kitten    129
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     169
+kitten     28
+senior     13
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.79 (22/28)
+Final Test Results - Loss: 0.5735548138618469, Accuracy: 0.776190459728241, Precision: 0.6257556966325707, Recall: 0.7667652859960552, F1 Score: 0.6535796682834669
+Confusion Matrix:
+ [[132  10  27]
+ [  7  21   0]
+ [  3   0  10]]
+outer_fold 4
+Train Set Group Distribution:
+000A    39
+103A    33
+047A    28
+057A    27
+074A    25
+        ..
+076A     1
+041A     1
+092A     1
+049A     1
+026B     1
+Name: cat_id, Length: 82, dtype: int64
+Testing Set Group Distribution:
+046A    63
+002B    32
+055A    20
+106A    14
+051A    12
+025A    11
+014B    10
+013B     8
+031A     7
+023A     6
+008A     6
+007A     6
+044A     5
+023B     5
+075A     5
+021A     5
+052A     4
+035A     4
+064A     3
+018A     2
+069A     2
+087A     2
+038A     2
+093A     2
+096A     1
+043A     1
+115A     1
+100A     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+M    253
+X    242
+F    181
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+X    92
+M    84
+F    64
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 000A, 033A, 015A, 001A, 103A, 071A, 097...
+kitten    [111A, 040A, 047A, 109A, 050A, 049A, 041A, 045...
+senior    [097A, 057A, 104A, 059A, 113A, 116A, 051B, 054...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [002B, 023A, 038A, 013B, 025A, 007A, 087A, 069...
+kitten                       [044A, 014B, 046A, 043A, 115A]
+senior                             [093A, 106A, 055A, 051A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 55, 'kitten': 10, 'senior': 17}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 19, 'kitten': 5, 'senior': 4}
+Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002A' '003A' '004A' '005A' '006A' '009A' '010A'
+ '011A' '012A' '014A' '015A' '016A' '019A' '019B' '020A' '022A' '024A'
+ '025B' '025C' '026A' '026B' '026C' '027A' '028A' '029A' '032A' '033A'
+ '034A' '036A' '037A' '039A' '040A' '041A' '045A' '047A' '048A' '049A'
+ '050A' '051B' '053A' '054A' '056A' '057A' '058A' '059A' '060A' '061A'
+ '062A' '063A' '065A' '066A' '067A' '068A' '070A' '071A' '072A' '073A'
+ '074A' '076A' '088A' '090A' '091A' '092A' '094A' '095A' '097A' '097B'
+ '099A' '101A' '102A' '103A' '104A' '105A' '108A' '109A' '110A' '111A'
+ '113A' '116A']
+Unique Test Group IDs:
+['002B' '007A' '008A' '013B' '014B' '018A' '021A' '023A' '023B' '025A'
+ '031A' '035A' '038A' '043A' '044A' '046A' '051A' '052A' '055A' '064A'
+ '069A' '075A' '087A' '093A' '096A' '100A' '106A' '115A']
+Moved to Training/Validation Set:
+{'046A'}
+Removed from Training/Validation Set:
+{'048A'}
+Moved to Test Set:
+{'048A'}
+Removed from Test Set
+{'046A'}
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002A' '003A' '004A' '005A' '006A' '009A' '010A'
+ '011A' '012A' '014A' '015A' '016A' '019A' '019B' '020A' '022A' '024A'
+ '025B' '025C' '026A' '026B' '026C' '027A' '028A' '029A' '032A' '033A'
+ '034A' '036A' '037A' '039A' '040A' '041A' '045A' '046A' '047A' '049A'
+ '050A' '051B' '053A' '054A' '056A' '057A' '058A' '059A' '060A' '061A'
+ '062A' '063A' '065A' '066A' '067A' '068A' '070A' '071A' '072A' '073A'
+ '074A' '076A' '088A' '090A' '091A' '092A' '094A' '095A' '097A' '097B'
+ '099A' '101A' '102A' '103A' '104A' '105A' '108A' '109A' '110A' '111A'
+ '113A' '116A']
+AFTER SWAP - Unique Test Group IDs:
+['002B' '007A' '008A' '013B' '014B' '018A' '021A' '023A' '023B' '025A'
+ '031A' '035A' '038A' '043A' '044A' '048A' '051A' '052A' '055A' '064A'
+ '069A' '075A' '087A' '093A' '096A' '100A' '106A' '115A']
+Length of X_train_val:
+738
+Length of y_train_val:
+738
+Length of groups_train_val:
+738
+Train Age Group Distribution BEFORE SWAP:
+adult     476
+senior    123
+kitten     77
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     112
+kitten     80
+senior     48
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     476
+kitten    139
+senior    123
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     112
+senior     48
+kitten     18
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.79 (22/28)
+Final Test Results - Loss: 1.3683925867080688, Accuracy: 0.7865168452262878, Precision: 0.8178467683369645, Recall: 0.7060185185185186, F1 Score: 0.7404398826979471
+Confusion Matrix:
+ [[105   2   5]
+ [  5  13   0]
+ [ 26   0  22]]
+
+Final Average F1-Score across all UNSEEN TEST sets: 0.6868835509399354
+
+Final Average Loss across all UNSEEN TEST sets: 0.9922767877578735
+
+Final Average Accuracy across all UNSEEN TEST sets: 0.7395023256540298
+
+Final Average Precision across all UNSEEN TEST sets: 0.6912440829473865
+
+Final Average Recall across all UNSEEN TEST sets: 0.72126130258602
+
+Overall Majority Vote Accuracy for cat_id: 0.78 (84/108)
+outer_fold 1
+Train Set Group Distribution:
+046A    63
+000A    39
+103A    33
+002B    32
+047A    28
+057A    27
+074A    25
+020A    23
+055A    20
+067A    19
+000B    19
+029A    17
+019A    17
+097A    16
+059A    14
+106A    14
+001A    14
+028A    13
+111A    13
+051A    12
+039A    12
+116A    12
+025A    11
+063A    11
+068A    11
+040A    10
+071A    10
+051B     9
+022A     9
+065A     9
+015A     9
+033A     9
+072A     9
+013B     8
+094A     8
+010A     8
+050A     7
+031A     7
+099A     7
+027A     7
+053A     6
+037A     6
+007A     6
+108A     6
+023A     6
+023B     5
+075A     5
+025C     5
+034A     5
+044A     5
+021A     5
+105A     4
+003A     4
+009A     4
+026A     4
+052A     4
+104A     4
+062A     4
+012A     3
+060A     3
+006A     3
+113A     3
+014A     3
+056A     3
+058A     3
+011A     2
+093A     2
+038A     2
+054A     2
+102A     2
+032A     2
+069A     2
+061A     2
+090A     1
+115A     1
+019B     1
+073A     1
+048A     1
+066A     1
+026C     1
+041A     1
+092A     1
+049A     1
+043A     1
+026B     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+101A    15
+097B    14
+002A    13
+036A    11
+014B    10
+005A    10
+016A    10
+045A     9
+095A     8
+109A     6
+008A     6
+070A     5
+035A     4
+064A     3
+025B     2
+018A     2
+087A     2
+096A     1
+076A     1
+004A     1
+088A     1
+091A     1
+110A     1
+100A     1
+024A     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+M    294
+X    275
+F    209
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+X    59
+M    43
+F    36
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 000A, 033A, 015A, 001A, 103A, 071A, 028...
+kitten    [044A, 111A, 040A, 046A, 047A, 050A, 043A, 049...
+senior    [093A, 097A, 057A, 106A, 104A, 055A, 059A, 113...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [097B, 101A, 095A, 005A, 091A, 002A, 070A, 087...
+kitten                             [014B, 109A, 045A, 110A]
+senior                                         [016A, 024A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 55, 'kitten': 11, 'senior': 19}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 19, 'kitten': 4, 'senior': 2}
+Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002B' '003A' '006A' '007A' '009A' '010A' '011A'
+ '012A' '013B' '014A' '015A' '019A' '019B' '020A' '021A' '022A' '023A'
+ '023B' '025A' '025C' '026A' '026B' '026C' '027A' '028A' '029A' '031A'
+ '032A' '033A' '034A' '037A' '038A' '039A' '040A' '041A' '043A' '044A'
+ '046A' '047A' '048A' '049A' '050A' '051A' '051B' '052A' '053A' '054A'
+ '055A' '056A' '057A' '058A' '059A' '060A' '061A' '062A' '063A' '065A'
+ '066A' '067A' '068A' '069A' '071A' '072A' '073A' '074A' '075A' '090A'
+ '092A' '093A' '094A' '097A' '099A' '102A' '103A' '104A' '105A' '106A'
+ '108A' '111A' '113A' '115A' '116A']
+Unique Test Group IDs:
+['002A' '004A' '005A' '008A' '014B' '016A' '018A' '024A' '025B' '035A'
+ '036A' '045A' '064A' '070A' '076A' '087A' '088A' '091A' '095A' '096A'
+ '097B' '100A' '101A' '109A' '110A']
+Moved to Training/Validation Set:
+set()
+Removed from Training/Validation Set:
+set()
+Moved to Test Set:
+set()
+Removed from Test Set
+set()
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002B' '003A' '006A' '007A' '009A' '010A' '011A'
+ '012A' '013B' '014A' '015A' '019A' '019B' '020A' '021A' '022A' '023A'
+ '023B' '025A' '025C' '026A' '026B' '026C' '027A' '028A' '029A' '031A'
+ '032A' '033A' '034A' '037A' '038A' '039A' '040A' '041A' '043A' '044A'
+ '046A' '047A' '048A' '049A' '050A' '051A' '051B' '052A' '053A' '054A'
+ '055A' '056A' '057A' '058A' '059A' '060A' '061A' '062A' '063A' '065A'
+ '066A' '067A' '068A' '069A' '071A' '072A' '073A' '074A' '075A' '090A'
+ '092A' '093A' '094A' '097A' '099A' '102A' '103A' '104A' '105A' '106A'
+ '108A' '111A' '113A' '115A' '116A']
+AFTER SWAP - Unique Test Group IDs:
+['002A' '004A' '005A' '008A' '014B' '016A' '018A' '024A' '025B' '035A'
+ '036A' '045A' '064A' '070A' '076A' '087A' '088A' '091A' '095A' '096A'
+ '097B' '100A' '101A' '109A' '110A']
+Length of X_train_val:
+778
+Length of y_train_val:
+778
+Length of groups_train_val:
+778
+Train Age Group Distribution BEFORE SWAP:
+adult     487
+senior    160
+kitten    131
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     101
+kitten     26
+senior     11
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     487
+senior    160
+kitten    131
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     101
+kitten     26
+senior     11
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.72 (18/25)
+Final Test Results - Loss: 1.0784953832626343, Accuracy: 0.7246376872062683, Precision: 0.6739604054182059, Recall: 0.7014932262457014, F1 Score: 0.651944880516309
+Confusion Matrix:
+ [[72  1 28]
+ [ 4 22  0]
+ [ 5  0  6]]
+outer_fold 2
+Train Set Group Distribution:
+000A    39
+002B    32
+047A    28
+057A    27
+074A    25
+020A    23
+055A    20
+067A    19
+097A    16
+101A    15
+001A    14
+097B    14
+106A    14
+002A    13
+028A    13
+039A    12
+116A    12
+036A    11
+025A    11
+005A    10
+014B    10
+016A    10
+040A    10
+071A    10
+072A     9
+015A     9
+045A     9
+033A     9
+051B     9
+013B     8
+095A     8
+010A     8
+050A     7
+027A     7
+031A     7
+099A     7
+008A     6
+109A     6
+053A     6
+037A     6
+070A     5
+021A     5
+075A     5
+034A     5
+035A     4
+105A     4
+062A     4
+003A     4
+060A     3
+012A     3
+064A     3
+058A     3
+006A     3
+113A     3
+014A     3
+102A     2
+018A     2
+025B     2
+038A     2
+087A     2
+011A     2
+093A     2
+069A     2
+054A     2
+061A     2
+110A     1
+100A     1
+090A     1
+024A     1
+115A     1
+091A     1
+043A     1
+088A     1
+004A     1
+048A     1
+041A     1
+092A     1
+049A     1
+076A     1
+096A     1
+026B     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+046A    63
+103A    33
+000B    19
+019A    17
+029A    17
+059A    14
+111A    13
+051A    12
+068A    11
+063A    11
+022A     9
+065A     9
+094A     8
+007A     6
+023A     6
+108A     6
+025C     5
+023B     5
+044A     5
+052A     4
+026A     4
+009A     4
+104A     4
+056A     3
+032A     2
+026C     1
+073A     1
+066A     1
+019B     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+M    242
+X    207
+F    173
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+X    127
+M     95
+F     72
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 000A, 033A, 015A, 001A, 071A, 097B, 028...
+kitten    [014B, 040A, 047A, 109A, 050A, 043A, 049A, 041...
+senior    [093A, 097A, 057A, 106A, 055A, 113A, 116A, 051...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [103A, 019A, 022A, 029A, 065A, 009A, 023A, 063...
+kitten                                   [044A, 111A, 046A]
+senior                 [104A, 059A, 056A, 051A, 094A, 108A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 54, 'kitten': 12, 'senior': 15}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 20, 'kitten': 3, 'senior': 6}
+Unique Training/Validation Group IDs:
+['000A' '001A' '002A' '002B' '003A' '004A' '005A' '006A' '008A' '010A'
+ '011A' '012A' '013B' '014A' '014B' '015A' '016A' '018A' '020A' '021A'
+ '024A' '025A' '025B' '026B' '027A' '028A' '031A' '033A' '034A' '035A'
+ '036A' '037A' '038A' '039A' '040A' '041A' '043A' '045A' '047A' '048A'
+ '049A' '050A' '051B' '053A' '054A' '055A' '057A' '058A' '060A' '061A'
+ '062A' '064A' '067A' '069A' '070A' '071A' '072A' '074A' '075A' '076A'
+ '087A' '088A' '090A' '091A' '092A' '093A' '095A' '096A' '097A' '097B'
+ '099A' '100A' '101A' '102A' '105A' '106A' '109A' '110A' '113A' '115A'
+ '116A']
+Unique Test Group IDs:
+['000B' '007A' '009A' '019A' '019B' '022A' '023A' '023B' '025C' '026A'
+ '026C' '029A' '032A' '044A' '046A' '051A' '052A' '056A' '059A' '063A'
+ '065A' '066A' '068A' '073A' '094A' '103A' '104A' '108A' '111A']
+Moved to Training/Validation Set:
+{'046A'}
+Removed from Training/Validation Set:
+{'047A'}
+Moved to Test Set:
+{'047A'}
+Removed from Test Set
+{'046A'}
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '001A' '002A' '002B' '003A' '004A' '005A' '006A' '008A' '010A'
+ '011A' '012A' '013B' '014A' '014B' '015A' '016A' '018A' '020A' '021A'
+ '024A' '025A' '025B' '026B' '027A' '028A' '031A' '033A' '034A' '035A'
+ '036A' '037A' '038A' '039A' '040A' '041A' '043A' '045A' '046A' '048A'
+ '049A' '050A' '051B' '053A' '054A' '055A' '057A' '058A' '060A' '061A'
+ '062A' '064A' '067A' '069A' '070A' '071A' '072A' '074A' '075A' '076A'
+ '087A' '088A' '090A' '091A' '092A' '093A' '095A' '096A' '097A' '097B'
+ '099A' '100A' '101A' '102A' '105A' '106A' '109A' '110A' '113A' '115A'
+ '116A']
+AFTER SWAP - Unique Test Group IDs:
+['000B' '007A' '009A' '019A' '019B' '022A' '023A' '023B' '025C' '026A'
+ '026C' '029A' '032A' '044A' '047A' '051A' '052A' '056A' '059A' '063A'
+ '065A' '066A' '068A' '073A' '094A' '103A' '104A' '108A' '111A']
+Length of X_train_val:
+657
+Length of y_train_val:
+657
+Length of groups_train_val:
+657
+Train Age Group Distribution BEFORE SWAP:
+adult     422
+senior    124
+kitten     76
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     166
+kitten     81
+senior     47
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     422
+senior    124
+kitten    111
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     166
+senior     47
+kitten     46
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.69 (20/29)
+Final Test Results - Loss: 0.899771511554718, Accuracy: 0.6679536700248718, Precision: 0.6598686905592276, Recall: 0.6838733286522594, F1 Score: 0.6608042379152231
+Confusion Matrix:
+ [[108   7  51]
+ [  7  39   0]
+ [ 21   0  26]]
+outer_fold 3
+Train Set Group Distribution:
+046A    63
+000A    39
+103A    33
+047A    28
+000B    19
+067A    19
+019A    17
+029A    17
+097A    16
+101A    15
+059A    14
+097B    14
+111A    13
+002A    13
+039A    12
+116A    12
+051A    12
+063A    11
+068A    11
+036A    11
+005A    10
+016A    10
+040A    10
+014B    10
+022A     9
+072A     9
+065A     9
+051B     9
+045A     9
+033A     9
+010A     8
+094A     8
+095A     8
+027A     7
+099A     7
+031A     7
+108A     6
+109A     6
+008A     6
+023A     6
+007A     6
+037A     6
+034A     5
+025C     5
+044A     5
+070A     5
+023B     5
+021A     5
+052A     4
+003A     4
+062A     4
+026A     4
+104A     4
+105A     4
+009A     4
+035A     4
+060A     3
+064A     3
+006A     3
+014A     3
+056A     3
+061A     2
+018A     2
+093A     2
+054A     2
+032A     2
+087A     2
+025B     2
+073A     1
+024A     1
+100A     1
+110A     1
+091A     1
+066A     1
+019B     1
+088A     1
+004A     1
+026C     1
+049A     1
+076A     1
+096A     1
+026B     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+002B    32
+057A    27
+074A    25
+020A    23
+055A    20
+001A    14
+106A    14
+028A    13
+025A    11
+071A    10
+015A     9
+013B     8
+050A     7
+053A     6
+075A     5
+113A     3
+012A     3
+058A     3
+011A     2
+102A     2
+069A     2
+038A     2
+041A     1
+092A     1
+048A     1
+043A     1
+115A     1
+090A     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+X    281
+M    209
+F    179
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+M    128
+F     66
+X     53
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 000A, 033A, 103A, 097B, 019A, 067A, 062...
+kitten    [044A, 014B, 111A, 040A, 046A, 047A, 109A, 049...
+senior    [093A, 097A, 104A, 059A, 116A, 051B, 054A, 056...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [015A, 001A, 071A, 028A, 074A, 020A, 002B, 038...
+kitten                       [050A, 043A, 041A, 048A, 115A]
+senior           [057A, 106A, 055A, 113A, 058A, 011A, 090A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 58, 'kitten': 10, 'senior': 14}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 16, 'kitten': 5, 'senior': 7}
+Unique Training/Validation Group IDs:
+['000A' '000B' '002A' '003A' '004A' '005A' '006A' '007A' '008A' '009A'
+ '010A' '014A' '014B' '016A' '018A' '019A' '019B' '021A' '022A' '023A'
+ '023B' '024A' '025B' '025C' '026A' '026B' '026C' '027A' '029A' '031A'
+ '032A' '033A' '034A' '035A' '036A' '037A' '039A' '040A' '044A' '045A'
+ '046A' '047A' '049A' '051A' '051B' '052A' '054A' '056A' '059A' '060A'
+ '061A' '062A' '063A' '064A' '065A' '066A' '067A' '068A' '070A' '072A'
+ '073A' '076A' '087A' '088A' '091A' '093A' '094A' '095A' '096A' '097A'
+ '097B' '099A' '100A' '101A' '103A' '104A' '105A' '108A' '109A' '110A'
+ '111A' '116A']
+Unique Test Group IDs:
+['001A' '002B' '011A' '012A' '013B' '015A' '020A' '025A' '028A' '038A'
+ '041A' '043A' '048A' '050A' '053A' '055A' '057A' '058A' '069A' '071A'
+ '074A' '075A' '090A' '092A' '102A' '106A' '113A' '115A']
+Moved to Training/Validation Set:
+set()
+Removed from Training/Validation Set:
+set()
+Moved to Test Set:
+set()
+Removed from Test Set
+set()
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '002A' '003A' '004A' '005A' '006A' '007A' '008A' '009A'
+ '010A' '014A' '014B' '016A' '018A' '019A' '019B' '021A' '022A' '023A'
+ '023B' '024A' '025B' '025C' '026A' '026B' '026C' '027A' '029A' '031A'
+ '032A' '033A' '034A' '035A' '036A' '037A' '039A' '040A' '044A' '045A'
+ '046A' '047A' '049A' '051A' '051B' '052A' '054A' '056A' '059A' '060A'
+ '061A' '062A' '063A' '064A' '065A' '066A' '067A' '068A' '070A' '072A'
+ '073A' '076A' '087A' '088A' '091A' '093A' '094A' '095A' '096A' '097A'
+ '097B' '099A' '100A' '101A' '103A' '104A' '105A' '108A' '109A' '110A'
+ '111A' '116A']
+AFTER SWAP - Unique Test Group IDs:
+['001A' '002B' '011A' '012A' '013B' '015A' '020A' '025A' '028A' '038A'
+ '041A' '043A' '048A' '050A' '053A' '055A' '057A' '058A' '069A' '071A'
+ '074A' '075A' '090A' '092A' '102A' '106A' '113A' '115A']
+Length of X_train_val:
+669
+Length of y_train_val:
+669
+Length of groups_train_val:
+669
+Train Age Group Distribution BEFORE SWAP:
+adult     422
+kitten    146
+senior    101
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     166
+senior     70
+kitten     11
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     422
+kitten    146
+senior    101
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     166
+senior     70
+kitten     11
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.79 (22/28)
+Final Test Results - Loss: 0.9648016095161438, Accuracy: 0.7044534683227539, Precision: 0.6859903381642513, Recall: 0.6709017889740782, F1 Score: 0.6531896824471717
+Confusion Matrix:
+ [[150   2  14]
+ [  1  10   0]
+ [ 56   0  14]]
+outer_fold 4
+Train Set Group Distribution:
+046A    63
+103A    33
+002B    32
+057A    27
+074A    25
+020A    23
+055A    20
+000B    19
+029A    17
+019A    17
+101A    15
+106A    14
+097B    14
+001A    14
+059A    14
+028A    13
+111A    13
+002A    13
+051A    12
+036A    11
+025A    11
+063A    11
+068A    11
+016A    10
+014B    10
+071A    10
+005A    10
+022A     9
+015A     9
+065A     9
+045A     9
+095A     8
+013B     8
+094A     8
+050A     7
+053A     6
+007A     6
+008A     6
+023A     6
+109A     6
+108A     6
+023B     5
+075A     5
+044A     5
+070A     5
+025C     5
+026A     4
+035A     4
+104A     4
+009A     4
+052A     4
+058A     3
+113A     3
+064A     3
+056A     3
+012A     3
+069A     2
+102A     2
+087A     2
+038A     2
+018A     2
+011A     2
+032A     2
+025B     2
+088A     1
+019B     1
+110A     1
+115A     1
+100A     1
+090A     1
+004A     1
+091A     1
+048A     1
+066A     1
+076A     1
+043A     1
+026C     1
+096A     1
+041A     1
+092A     1
+073A     1
+024A     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+000A    39
+047A    28
+067A    19
+097A    16
+039A    12
+116A    12
+040A    10
+051B     9
+072A     9
+033A     9
+010A     8
+031A     7
+027A     7
+099A     7
+037A     6
+021A     5
+034A     5
+105A     4
+003A     4
+062A     4
+060A     3
+006A     3
+014A     3
+061A     2
+054A     2
+093A     2
+049A     1
+026B     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+M    266
+X    239
+F    174
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+X    95
+M    71
+F    71
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [015A, 001A, 103A, 071A, 097B, 028A, 019A, 074...
+kitten    [044A, 014B, 111A, 046A, 109A, 050A, 043A, 041...
+senior    [057A, 106A, 104A, 055A, 059A, 113A, 056A, 051...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [006A, 000A, 033A, 067A, 062A, 034A, 072A, 039...
+kitten                                   [040A, 047A, 049A]
+senior                 [093A, 097A, 116A, 051B, 054A, 061A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 55, 'kitten': 12, 'senior': 15}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 19, 'kitten': 3, 'senior': 6}
+Unique Training/Validation Group IDs:
+['000B' '001A' '002A' '002B' '004A' '005A' '007A' '008A' '009A' '011A'
+ '012A' '013B' '014B' '015A' '016A' '018A' '019A' '019B' '020A' '022A'
+ '023A' '023B' '024A' '025A' '025B' '025C' '026A' '026C' '028A' '029A'
+ '032A' '035A' '036A' '038A' '041A' '043A' '044A' '045A' '046A' '048A'
+ '050A' '051A' '052A' '053A' '055A' '056A' '057A' '058A' '059A' '063A'
+ '064A' '065A' '066A' '068A' '069A' '070A' '071A' '073A' '074A' '075A'
+ '076A' '087A' '088A' '090A' '091A' '092A' '094A' '095A' '096A' '097B'
+ '100A' '101A' '102A' '103A' '104A' '106A' '108A' '109A' '110A' '111A'
+ '113A' '115A']
+Unique Test Group IDs:
+['000A' '003A' '006A' '010A' '014A' '021A' '026B' '027A' '031A' '033A'
+ '034A' '037A' '039A' '040A' '047A' '049A' '051B' '054A' '060A' '061A'
+ '062A' '067A' '072A' '093A' '097A' '099A' '105A' '116A']
+Moved to Training/Validation Set:
+{'000A'}
+Removed from Training/Validation Set:
+{'002A'}
+Moved to Test Set:
+{'002A'}
+Removed from Test Set
+{'000A'}
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002B' '004A' '005A' '007A' '008A' '009A' '011A'
+ '012A' '013B' '014B' '015A' '016A' '018A' '019A' '019B' '020A' '022A'
+ '023A' '023B' '024A' '025A' '025B' '025C' '026A' '026C' '028A' '029A'
+ '032A' '035A' '036A' '038A' '041A' '043A' '044A' '045A' '046A' '048A'
+ '050A' '051A' '052A' '053A' '055A' '056A' '057A' '058A' '059A' '063A'
+ '064A' '065A' '066A' '068A' '069A' '070A' '071A' '073A' '074A' '075A'
+ '076A' '087A' '088A' '090A' '091A' '092A' '094A' '095A' '096A' '097B'
+ '100A' '101A' '102A' '103A' '104A' '106A' '108A' '109A' '110A' '111A'
+ '113A' '115A']
+AFTER SWAP - Unique Test Group IDs:
+['002A' '003A' '006A' '010A' '014A' '021A' '026B' '027A' '031A' '033A'
+ '034A' '037A' '039A' '040A' '047A' '049A' '051B' '054A' '060A' '061A'
+ '062A' '067A' '072A' '093A' '097A' '099A' '105A' '116A']
+Length of X_train_val:
+705
+Length of y_train_val:
+705
+Length of groups_train_val:
+705
+Train Age Group Distribution BEFORE SWAP:
+adult     433
+senior    128
+kitten    118
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     155
+senior     43
+kitten     39
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     459
+senior    128
+kitten    118
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     129
+senior     43
+kitten     39
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.82 (23/28)
+Final Test Results - Loss: 0.5611311793327332, Accuracy: 0.8199052214622498, Precision: 0.8091127098321342, Recall: 0.7738024249652157, F1 Score: 0.7863228162982555
+Confusion Matrix:
+ [[115   6   8]
+ [  5  34   0]
+ [ 19   0  24]]
+
+Final Average F1-Score across all UNSEEN TEST sets: 0.6880654042942399
+
+Final Average Loss across all UNSEEN TEST sets: 0.8760499209165573
+
+Final Average Accuracy across all UNSEEN TEST sets: 0.729237511754036
+
+Final Average Precision across all UNSEEN TEST sets: 0.7072330359934548
+
+Final Average Recall across all UNSEEN TEST sets: 0.7075176922093137
+
+Overall Majority Vote Accuracy for cat_id: 0.75 (81/108)
+outer_fold 1
+Train Set Group Distribution:
+046A    63
+002B    32
+047A    28
+057A    27
+074A    25
+055A    20
+000B    19
+029A    17
+097B    14
+001A    14
+111A    13
+002A    13
+051A    12
+039A    12
+025A    11
+063A    11
+068A    11
+036A    11
+005A    10
+014B    10
+040A    10
+071A    10
+022A     9
+065A     9
+045A     9
+033A     9
+051B     9
+094A     8
+013B     8
+010A     8
+095A     8
+027A     7
+099A     7
+031A     7
+008A     6
+023A     6
+007A     6
+053A     6
+109A     6
+108A     6
+021A     5
+023B     5
+034A     5
+044A     5
+025C     5
+070A     5
+035A     4
+009A     4
+026A     4
+105A     4
+052A     4
+062A     4
+003A     4
+012A     3
+064A     3
+006A     3
+058A     3
+113A     3
+032A     2
+025B     2
+102A     2
+011A     2
+038A     2
+087A     2
+061A     2
+093A     2
+018A     2
+019B     1
+110A     1
+100A     1
+115A     1
+090A     1
+024A     1
+073A     1
+048A     1
+088A     1
+004A     1
+091A     1
+076A     1
+041A     1
+092A     1
+049A     1
+096A     1
+043A     1
+026B     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+000A    39
+103A    33
+020A    23
+067A    19
+019A    17
+097A    16
+101A    15
+059A    14
+106A    14
+028A    13
+116A    12
+016A    10
+072A     9
+015A     9
+050A     7
+037A     6
+075A     5
+104A     4
+014A     3
+056A     3
+060A     3
+069A     2
+054A     2
+026C     1
+066A     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+X    272
+M    209
+F    155
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+M    128
+F     90
+X     62
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 033A, 001A, 071A, 097B, 074A, 062A, 002...
+kitten    [044A, 014B, 111A, 040A, 046A, 047A, 109A, 043...
+senior    [093A, 057A, 055A, 113A, 051B, 051A, 058A, 094...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [000A, 015A, 103A, 028A, 019A, 067A, 020A, 101...
+kitten                                               [050A]
+senior     [097A, 106A, 104A, 059A, 116A, 054A, 056A, 016A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 58, 'kitten': 14, 'senior': 13}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 16, 'kitten': 1, 'senior': 8}
+Unique Training/Validation Group IDs:
+['000B' '001A' '002A' '002B' '003A' '004A' '005A' '006A' '007A' '008A'
+ '009A' '010A' '011A' '012A' '013B' '014B' '018A' '019B' '021A' '022A'
+ '023A' '023B' '024A' '025A' '025B' '025C' '026A' '026B' '027A' '029A'
+ '031A' '032A' '033A' '034A' '035A' '036A' '038A' '039A' '040A' '041A'
+ '043A' '044A' '045A' '046A' '047A' '048A' '049A' '051A' '051B' '052A'
+ '053A' '055A' '057A' '058A' '061A' '062A' '063A' '064A' '065A' '068A'
+ '070A' '071A' '073A' '074A' '076A' '087A' '088A' '090A' '091A' '092A'
+ '093A' '094A' '095A' '096A' '097B' '099A' '100A' '102A' '105A' '108A'
+ '109A' '110A' '111A' '113A' '115A']
+Unique Test Group IDs:
+['000A' '014A' '015A' '016A' '019A' '020A' '026C' '028A' '037A' '050A'
+ '054A' '056A' '059A' '060A' '066A' '067A' '069A' '072A' '075A' '097A'
+ '101A' '103A' '104A' '106A' '116A']
+Moved to Training/Validation Set:
+{'000A'}
+Removed from Training/Validation Set:
+{'007A'}
+Moved to Test Set:
+{'007A'}
+Removed from Test Set
+{'000A'}
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002A' '002B' '003A' '004A' '005A' '006A' '008A'
+ '009A' '010A' '011A' '012A' '013B' '014B' '018A' '019B' '021A' '022A'
+ '023A' '023B' '024A' '025A' '025B' '025C' '026A' '026B' '027A' '029A'
+ '031A' '032A' '033A' '034A' '035A' '036A' '038A' '039A' '040A' '041A'
+ '043A' '044A' '045A' '046A' '047A' '048A' '049A' '051A' '051B' '052A'
+ '053A' '055A' '057A' '058A' '061A' '062A' '063A' '064A' '065A' '068A'
+ '070A' '071A' '073A' '074A' '076A' '087A' '088A' '090A' '091A' '092A'
+ '093A' '094A' '095A' '096A' '097B' '099A' '100A' '102A' '105A' '108A'
+ '109A' '110A' '111A' '113A' '115A']
+AFTER SWAP - Unique Test Group IDs:
+['007A' '014A' '015A' '016A' '019A' '020A' '026C' '028A' '037A' '050A'
+ '054A' '056A' '059A' '060A' '066A' '067A' '069A' '072A' '075A' '097A'
+ '101A' '103A' '104A' '106A' '116A']
+Length of X_train_val:
+669
+Length of y_train_val:
+669
+Length of groups_train_val:
+669
+Train Age Group Distribution BEFORE SWAP:
+adult     390
+kitten    150
+senior     96
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     198
+senior     75
+kitten      7
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     423
+kitten    150
+senior     96
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     165
+senior     75
+kitten      7
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.76 (19/25)
+Final Test Results - Loss: 0.8288688659667969, Accuracy: 0.7246963381767273, Precision: 0.623667898868566, Recall: 0.7176334776334775, F1 Score: 0.6449060693641618
+Confusion Matrix:
+ [[139   7  19]
+ [  1   6   0]
+ [ 41   0  34]]
+outer_fold 2
+Train Set Group Distribution:
+046A    63
+000A    39
+103A    33
+047A    28
+020A    23
+055A    20
+067A    19
+029A    17
+019A    17
+097A    16
+101A    15
+059A    14
+001A    14
+097B    14
+106A    14
+111A    13
+028A    13
+039A    12
+116A    12
+051A    12
+063A    11
+036A    11
+025A    11
+068A    11
+040A    10
+071A    10
+005A    10
+016A    10
+014B    10
+051B     9
+033A     9
+015A     9
+072A     9
+045A     9
+010A     8
+094A     8
+095A     8
+050A     7
+099A     7
+109A     6
+037A     6
+007A     6
+053A     6
+108A     6
+008A     6
+025C     5
+075A     5
+023B     5
+052A     4
+104A     4
+003A     4
+062A     4
+012A     3
+060A     3
+058A     3
+006A     3
+113A     3
+014A     3
+056A     3
+061A     2
+054A     2
+093A     2
+032A     2
+069A     2
+038A     2
+011A     2
+102A     2
+043A     1
+024A     1
+090A     1
+110A     1
+091A     1
+066A     1
+019B     1
+088A     1
+004A     1
+026C     1
+049A     1
+076A     1
+096A     1
+026B     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+002B    32
+057A    27
+074A    25
+000B    19
+002A    13
+022A     9
+065A     9
+013B     8
+031A     7
+027A     7
+023A     6
+021A     5
+044A     5
+070A     5
+034A     5
+009A     4
+026A     4
+105A     4
+035A     4
+064A     3
+087A     2
+018A     2
+025B     2
+073A     1
+092A     1
+041A     1
+048A     1
+115A     1
+100A     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+X    286
+M    252
+F    165
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+M    85
+F    80
+X    48
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 000A, 033A, 015A, 001A, 103A, 071A, 097...
+kitten    [014B, 111A, 040A, 046A, 047A, 109A, 050A, 043...
+senior    [093A, 097A, 106A, 104A, 055A, 059A, 113A, 116...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [074A, 002B, 022A, 034A, 065A, 002A, 009A, 023...
+kitten                             [044A, 041A, 048A, 115A]
+senior                                               [057A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 50, 'kitten': 11, 'senior': 20}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 24, 'kitten': 4, 'senior': 1}
+Unique Training/Validation Group IDs:
+['000A' '001A' '003A' '004A' '005A' '006A' '007A' '008A' '010A' '011A'
+ '012A' '014A' '014B' '015A' '016A' '019A' '019B' '020A' '023B' '024A'
+ '025A' '025C' '026B' '026C' '028A' '029A' '032A' '033A' '036A' '037A'
+ '038A' '039A' '040A' '043A' '045A' '046A' '047A' '049A' '050A' '051A'
+ '051B' '052A' '053A' '054A' '055A' '056A' '058A' '059A' '060A' '061A'
+ '062A' '063A' '066A' '067A' '068A' '069A' '071A' '072A' '075A' '076A'
+ '088A' '090A' '091A' '093A' '094A' '095A' '096A' '097A' '097B' '099A'
+ '101A' '102A' '103A' '104A' '106A' '108A' '109A' '110A' '111A' '113A'
+ '116A']
+Unique Test Group IDs:
+['000B' '002A' '002B' '009A' '013B' '018A' '021A' '022A' '023A' '025B'
+ '026A' '027A' '031A' '034A' '035A' '041A' '044A' '048A' '057A' '064A'
+ '065A' '070A' '073A' '074A' '087A' '092A' '100A' '105A' '115A']
+Moved to Training/Validation Set:
+set()
+Removed from Training/Validation Set:
+set()
+Moved to Test Set:
+set()
+Removed from Test Set
+set()
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '001A' '003A' '004A' '005A' '006A' '007A' '008A' '010A' '011A'
+ '012A' '014A' '014B' '015A' '016A' '019A' '019B' '020A' '023B' '024A'
+ '025A' '025C' '026B' '026C' '028A' '029A' '032A' '033A' '036A' '037A'
+ '038A' '039A' '040A' '043A' '045A' '046A' '047A' '049A' '050A' '051A'
+ '051B' '052A' '053A' '054A' '055A' '056A' '058A' '059A' '060A' '061A'
+ '062A' '063A' '066A' '067A' '068A' '069A' '071A' '072A' '075A' '076A'
+ '088A' '090A' '091A' '093A' '094A' '095A' '096A' '097A' '097B' '099A'
+ '101A' '102A' '103A' '104A' '106A' '108A' '109A' '110A' '111A' '113A'
+ '116A']
+AFTER SWAP - Unique Test Group IDs:
+['000B' '002A' '002B' '009A' '013B' '018A' '021A' '022A' '023A' '025B'
+ '026A' '027A' '031A' '034A' '035A' '041A' '044A' '048A' '057A' '064A'
+ '065A' '070A' '073A' '074A' '087A' '092A' '100A' '105A' '115A']
+Length of X_train_val:
+703
+Length of y_train_val:
+703
+Length of groups_train_val:
+703
+Train Age Group Distribution BEFORE SWAP:
+adult     410
+kitten    149
+senior    144
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     178
+senior     27
+kitten      8
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     410
+kitten    149
+senior    144
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     178
+senior     27
+kitten      8
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.86 (25/29)
+Final Test Results - Loss: 0.6105567216873169, Accuracy: 0.7887324094772339, Precision: 0.6075095785440613, Recall: 0.6371549452073797, F1 Score: 0.6213726283714619
+Confusion Matrix:
+ [[154   3  21]
+ [  2   6   0]
+ [ 19   0   8]]
+outer_fold 3
+Train Set Group Distribution:
+000A    39
+103A    33
+002B    32
+057A    27
+074A    25
+020A    23
+055A    20
+000B    19
+067A    19
+029A    17
+019A    17
+097A    16
+101A    15
+106A    14
+097B    14
+001A    14
+059A    14
+028A    13
+002A    13
+039A    12
+051A    12
+116A    12
+036A    11
+014B    10
+005A    10
+016A    10
+065A     9
+022A     9
+072A     9
+015A     9
+013B     8
+010A     8
+031A     7
+027A     7
+050A     7
+023A     6
+108A     6
+037A     6
+075A     5
+023B     5
+021A     5
+025C     5
+070A     5
+034A     5
+044A     5
+052A     4
+035A     4
+026A     4
+009A     4
+105A     4
+104A     4
+003A     4
+062A     4
+060A     3
+058A     3
+064A     3
+006A     3
+056A     3
+014A     3
+018A     2
+054A     2
+069A     2
+087A     2
+093A     2
+011A     2
+025B     2
+102A     2
+073A     1
+115A     1
+024A     1
+090A     1
+100A     1
+110A     1
+048A     1
+091A     1
+004A     1
+043A     1
+066A     1
+026C     1
+041A     1
+092A     1
+026B     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+046A    63
+047A    28
+111A    13
+068A    11
+063A    11
+025A    11
+071A    10
+040A    10
+033A     9
+045A     9
+051B     9
+095A     8
+094A     8
+099A     7
+053A     6
+008A     6
+109A     6
+007A     6
+113A     3
+012A     3
+032A     2
+038A     2
+061A     2
+096A     1
+076A     1
+049A     1
+088A     1
+019B     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+M    284
+F    216
+X    168
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+X    166
+M     53
+F     29
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 000A, 015A, 001A, 103A, 097B, 028A, 019...
+kitten     [044A, 014B, 050A, 043A, 041A, 048A, 115A, 110A]
+senior    [093A, 097A, 057A, 106A, 104A, 055A, 059A, 116...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [033A, 071A, 095A, 063A, 038A, 099A, 025A, 007...
+kitten           [111A, 040A, 046A, 047A, 109A, 049A, 045A]
+senior                             [113A, 051B, 094A, 061A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 57, 'kitten': 8, 'senior': 17}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 17, 'kitten': 7, 'senior': 4}
+Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002A' '002B' '003A' '004A' '005A' '006A' '009A'
+ '010A' '011A' '013B' '014A' '014B' '015A' '016A' '018A' '019A' '020A'
+ '021A' '022A' '023A' '023B' '024A' '025B' '025C' '026A' '026B' '026C'
+ '027A' '028A' '029A' '031A' '034A' '035A' '036A' '037A' '039A' '041A'
+ '043A' '044A' '048A' '050A' '051A' '052A' '054A' '055A' '056A' '057A'
+ '058A' '059A' '060A' '062A' '064A' '065A' '066A' '067A' '069A' '070A'
+ '072A' '073A' '074A' '075A' '087A' '090A' '091A' '092A' '093A' '097A'
+ '097B' '100A' '101A' '102A' '103A' '104A' '105A' '106A' '108A' '110A'
+ '115A' '116A']
+Unique Test Group IDs:
+['007A' '008A' '012A' '019B' '025A' '032A' '033A' '038A' '040A' '045A'
+ '046A' '047A' '049A' '051B' '053A' '061A' '063A' '068A' '071A' '076A'
+ '088A' '094A' '095A' '096A' '099A' '109A' '111A' '113A']
+Moved to Training/Validation Set:
+{'046A'}
+Removed from Training/Validation Set:
+{'050A'}
+Moved to Test Set:
+{'050A'}
+Removed from Test Set
+{'046A'}
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002A' '002B' '003A' '004A' '005A' '006A' '009A'
+ '010A' '011A' '013B' '014A' '014B' '015A' '016A' '018A' '019A' '020A'
+ '021A' '022A' '023A' '023B' '024A' '025B' '025C' '026A' '026B' '026C'
+ '027A' '028A' '029A' '031A' '034A' '035A' '036A' '037A' '039A' '041A'
+ '043A' '044A' '046A' '048A' '051A' '052A' '054A' '055A' '056A' '057A'
+ '058A' '059A' '060A' '062A' '064A' '065A' '066A' '067A' '069A' '070A'
+ '072A' '073A' '074A' '075A' '087A' '090A' '091A' '092A' '093A' '097A'
+ '097B' '100A' '101A' '102A' '103A' '104A' '105A' '106A' '108A' '110A'
+ '115A' '116A']
+AFTER SWAP - Unique Test Group IDs:
+['007A' '008A' '012A' '019B' '025A' '032A' '033A' '038A' '040A' '045A'
+ '047A' '049A' '050A' '051B' '053A' '061A' '063A' '068A' '071A' '076A'
+ '088A' '094A' '095A' '096A' '099A' '109A' '111A' '113A']
+Length of X_train_val:
+724
+Length of y_train_val:
+724
+Length of groups_train_val:
+724
+Train Age Group Distribution BEFORE SWAP:
+adult     492
+senior    149
+kitten     27
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+kitten    130
+adult      96
+senior     22
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     492
+senior    149
+kitten     83
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     96
+kitten    74
+senior    22
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.75 (21/28)
+Final Test Results - Loss: 0.8353145718574524, Accuracy: 0.71875, Precision: 0.6587962962962962, Recall: 0.6970635408135407, F1 Score: 0.6630829952195396
+Confusion Matrix:
+ [[61  8 27]
+ [10 64  0]
+ [ 9  0 13]]
+outer_fold 4
+Train Set Group Distribution:
+046A    63
+000A    39
+103A    33
+002B    32
+047A    28
+057A    27
+074A    25
+020A    23
+067A    19
+000B    19
+019A    17
+097A    16
+101A    15
+106A    14
+059A    14
+002A    13
+028A    13
+111A    13
+116A    12
+025A    11
+068A    11
+063A    11
+016A    10
+071A    10
+040A    10
+022A     9
+033A     9
+045A     9
+015A     9
+051B     9
+065A     9
+072A     9
+094A     8
+013B     8
+095A     8
+031A     7
+050A     7
+027A     7
+099A     7
+008A     6
+007A     6
+037A     6
+109A     6
+023A     6
+053A     6
+075A     5
+044A     5
+070A     5
+034A     5
+021A     5
+009A     4
+105A     4
+104A     4
+035A     4
+026A     4
+012A     3
+113A     3
+056A     3
+060A     3
+014A     3
+064A     3
+061A     2
+025B     2
+069A     2
+038A     2
+018A     2
+087A     2
+032A     2
+054A     2
+073A     1
+048A     1
+115A     1
+019B     1
+088A     1
+066A     1
+049A     1
+076A     1
+096A     1
+026C     1
+041A     1
+092A     1
+100A     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+055A    20
+029A    17
+001A    14
+097B    14
+051A    12
+039A    12
+036A    11
+005A    10
+014B    10
+010A     8
+108A     6
+023B     5
+025C     5
+062A     4
+003A     4
+052A     4
+006A     3
+058A     3
+011A     2
+102A     2
+093A     2
+043A     1
+091A     1
+004A     1
+110A     1
+090A     1
+024A     1
+026B     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+X    276
+M    266
+F    199
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+M    71
+X    58
+F    46
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [000A, 033A, 015A, 103A, 071A, 028A, 019A, 074...
+kitten    [044A, 111A, 040A, 046A, 047A, 109A, 050A, 049...
+senior    [097A, 057A, 106A, 104A, 059A, 113A, 116A, 051...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [006A, 001A, 097B, 062A, 029A, 005A, 091A, 039...
+kitten                                   [014B, 043A, 110A]
+senior     [093A, 055A, 051A, 058A, 108A, 011A, 090A, 024A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 57, 'kitten': 12, 'senior': 13}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 17, 'kitten': 3, 'senior': 8}
+Unique Training/Validation Group IDs:
+['000A' '000B' '002A' '002B' '007A' '008A' '009A' '012A' '013B' '014A'
+ '015A' '016A' '018A' '019A' '019B' '020A' '021A' '022A' '023A' '025A'
+ '025B' '026A' '026C' '027A' '028A' '031A' '032A' '033A' '034A' '035A'
+ '037A' '038A' '040A' '041A' '044A' '045A' '046A' '047A' '048A' '049A'
+ '050A' '051B' '053A' '054A' '056A' '057A' '059A' '060A' '061A' '063A'
+ '064A' '065A' '066A' '067A' '068A' '069A' '070A' '071A' '072A' '073A'
+ '074A' '075A' '076A' '087A' '088A' '092A' '094A' '095A' '096A' '097A'
+ '099A' '100A' '101A' '103A' '104A' '105A' '106A' '109A' '111A' '113A'
+ '115A' '116A']
+Unique Test Group IDs:
+['001A' '003A' '004A' '005A' '006A' '010A' '011A' '014B' '023B' '024A'
+ '025C' '026B' '029A' '036A' '039A' '043A' '051A' '052A' '055A' '058A'
+ '062A' '090A' '091A' '093A' '097B' '102A' '108A' '110A']
+Moved to Training/Validation Set:
+set()
+Removed from Training/Validation Set:
+set()
+Moved to Test Set:
+set()
+Removed from Test Set
+set()
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '002A' '002B' '007A' '008A' '009A' '012A' '013B' '014A'
+ '015A' '016A' '018A' '019A' '019B' '020A' '021A' '022A' '023A' '025A'
+ '025B' '026A' '026C' '027A' '028A' '031A' '032A' '033A' '034A' '035A'
+ '037A' '038A' '040A' '041A' '044A' '045A' '046A' '047A' '048A' '049A'
+ '050A' '051B' '053A' '054A' '056A' '057A' '059A' '060A' '061A' '063A'
+ '064A' '065A' '066A' '067A' '068A' '069A' '070A' '071A' '072A' '073A'
+ '074A' '075A' '076A' '087A' '088A' '092A' '094A' '095A' '096A' '097A'
+ '099A' '100A' '101A' '103A' '104A' '105A' '106A' '109A' '111A' '113A'
+ '115A' '116A']
+AFTER SWAP - Unique Test Group IDs:
+['001A' '003A' '004A' '005A' '006A' '010A' '011A' '014B' '023B' '024A'
+ '025C' '026B' '029A' '036A' '039A' '043A' '051A' '052A' '055A' '058A'
+ '062A' '090A' '091A' '093A' '097B' '102A' '108A' '110A']
+Length of X_train_val:
+741
+Length of y_train_val:
+741
+Length of groups_train_val:
+741
+Train Age Group Distribution BEFORE SWAP:
+adult     472
+kitten    145
+senior    124
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     116
+senior     47
+kitten     12
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     472
+kitten    145
+senior    124
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     116
+senior     47
+kitten     12
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.57 (16/28)
+Final Test Results - Loss: 1.586136817932129, Accuracy: 0.5885714292526245, Precision: 0.6642947295121208, Recall: 0.6091138827749246, F1 Score: 0.6206773024954844
+Confusion Matrix:
+ [[68  1 47]
+ [ 4  8  0]
+ [20  0 27]]
+
+Final Average F1-Score across all UNSEEN TEST sets: 0.637509748862662
+
+Final Average Loss across all UNSEEN TEST sets: 0.9652192443609238
+
+Final Average Accuracy across all UNSEEN TEST sets: 0.7051875442266464
+
+Final Average Precision across all UNSEEN TEST sets: 0.6385671258052611
+
+Final Average Recall across all UNSEEN TEST sets: 0.6652414616073306
+
+Overall Majority Vote Accuracy for cat_id: 0.73 (79/108)
+outer_fold 1
+Train Set Group Distribution:
+046A    63
+000A    39
+103A    33
+002B    32
+057A    27
+074A    25
+020A    23
+055A    20
+000B    19
+029A    17
+019A    17
+097A    16
+101A    15
+001A    14
+059A    14
+097B    14
+028A    13
+111A    13
+002A    13
+039A    12
+051A    12
+025A    11
+036A    11
+068A    11
+063A    11
+014B    10
+040A    10
+016A    10
+071A    10
+051B     9
+065A     9
+045A     9
+010A     8
+094A     8
+095A     8
+013B     8
+031A     7
+027A     7
+053A     6
+023A     6
+108A     6
+007A     6
+037A     6
+023B     5
+044A     5
+034A     5
+021A     5
+070A     5
+025C     5
+075A     5
+003A     4
+026A     4
+104A     4
+035A     4
+058A     3
+060A     3
+012A     3
+006A     3
+056A     3
+113A     3
+087A     2
+093A     2
+025B     2
+054A     2
+032A     2
+069A     2
+038A     2
+061A     2
+088A     1
+024A     1
+090A     1
+110A     1
+115A     1
+019B     1
+073A     1
+004A     1
+048A     1
+043A     1
+026C     1
+041A     1
+092A     1
+049A     1
+076A     1
+096A     1
+026B     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+047A    28
+067A    19
+106A    14
+116A    12
+005A    10
+033A     9
+022A     9
+072A     9
+015A     9
+050A     7
+099A     7
+109A     6
+008A     6
+105A     4
+009A     4
+052A     4
+062A     4
+064A     3
+014A     3
+018A     2
+011A     2
+102A     2
+091A     1
+066A     1
+100A     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+X    277
+M    259
+F    204
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+M    78
+X    57
+F    41
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 000A, 001A, 103A, 071A, 097B, 028A, 019...
+kitten    [044A, 014B, 111A, 040A, 046A, 043A, 049A, 041...
+senior    [093A, 097A, 057A, 104A, 055A, 059A, 113A, 051...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [033A, 015A, 067A, 062A, 022A, 005A, 072A, 091...
+kitten                                   [047A, 109A, 050A]
+senior                                   [106A, 116A, 011A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 55, 'kitten': 12, 'senior': 18}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 19, 'kitten': 3, 'senior': 3}
+Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002A' '002B' '003A' '004A' '006A' '007A' '010A'
+ '012A' '013B' '014B' '016A' '019A' '019B' '020A' '021A' '023A' '023B'
+ '024A' '025A' '025B' '025C' '026A' '026B' '026C' '027A' '028A' '029A'
+ '031A' '032A' '034A' '035A' '036A' '037A' '038A' '039A' '040A' '041A'
+ '043A' '044A' '045A' '046A' '048A' '049A' '051A' '051B' '053A' '054A'
+ '055A' '056A' '057A' '058A' '059A' '060A' '061A' '063A' '065A' '068A'
+ '069A' '070A' '071A' '073A' '074A' '075A' '076A' '087A' '088A' '090A'
+ '092A' '093A' '094A' '095A' '096A' '097A' '097B' '101A' '103A' '104A'
+ '108A' '110A' '111A' '113A' '115A']
+Unique Test Group IDs:
+['005A' '008A' '009A' '011A' '014A' '015A' '018A' '022A' '033A' '047A'
+ '050A' '052A' '062A' '064A' '066A' '067A' '072A' '091A' '099A' '100A'
+ '102A' '105A' '106A' '109A' '116A']
+Moved to Training/Validation Set:
+set()
+Removed from Training/Validation Set:
+set()
+Moved to Test Set:
+set()
+Removed from Test Set
+set()
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002A' '002B' '003A' '004A' '006A' '007A' '010A'
+ '012A' '013B' '014B' '016A' '019A' '019B' '020A' '021A' '023A' '023B'
+ '024A' '025A' '025B' '025C' '026A' '026B' '026C' '027A' '028A' '029A'
+ '031A' '032A' '034A' '035A' '036A' '037A' '038A' '039A' '040A' '041A'
+ '043A' '044A' '045A' '046A' '048A' '049A' '051A' '051B' '053A' '054A'
+ '055A' '056A' '057A' '058A' '059A' '060A' '061A' '063A' '065A' '068A'
+ '069A' '070A' '071A' '073A' '074A' '075A' '076A' '087A' '088A' '090A'
+ '092A' '093A' '094A' '095A' '096A' '097A' '097B' '101A' '103A' '104A'
+ '108A' '110A' '111A' '113A' '115A']
+AFTER SWAP - Unique Test Group IDs:
+['005A' '008A' '009A' '011A' '014A' '015A' '018A' '022A' '033A' '047A'
+ '050A' '052A' '062A' '064A' '066A' '067A' '072A' '091A' '099A' '100A'
+ '102A' '105A' '106A' '109A' '116A']
+Length of X_train_val:
+740
+Length of y_train_val:
+740
+Length of groups_train_val:
+740
+Train Age Group Distribution BEFORE SWAP:
+adult     481
+senior    143
+kitten    116
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     107
+kitten     41
+senior     28
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     481
+senior    143
+kitten    116
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     107
+kitten     41
+senior     28
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.80 (20/25)
+Final Test Results - Loss: 0.8305748105049133, Accuracy: 0.7443181872367859, Precision: 0.6804778554778554, Recall: 0.671513237161744, F1 Score: 0.6757315431150556
+Confusion Matrix:
+ [[86  5 16]
+ [ 6 35  0]
+ [18  0 10]]
+outer_fold 2
+Train Set Group Distribution:
+000A    39
+103A    33
+002B    32
+047A    28
+074A    25
+020A    23
+067A    19
+019A    17
+097A    16
+106A    14
+001A    14
+059A    14
+028A    13
+111A    13
+002A    13
+039A    12
+116A    12
+051A    12
+036A    11
+068A    11
+025A    11
+071A    10
+014B    10
+040A    10
+005A    10
+016A    10
+051B     9
+045A     9
+015A     9
+033A     9
+065A     9
+072A     9
+022A     9
+094A     8
+095A     8
+050A     7
+031A     7
+099A     7
+027A     7
+008A     6
+109A     6
+007A     6
+037A     6
+023B     5
+021A     5
+034A     5
+075A     5
+009A     4
+105A     4
+035A     4
+104A     4
+003A     4
+052A     4
+062A     4
+064A     3
+058A     3
+006A     3
+056A     3
+113A     3
+014A     3
+060A     3
+011A     2
+061A     2
+102A     2
+032A     2
+018A     2
+054A     2
+087A     2
+093A     2
+092A     1
+049A     1
+073A     1
+026C     1
+066A     1
+048A     1
+019B     1
+091A     1
+110A     1
+100A     1
+090A     1
+026B     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+046A    63
+057A    27
+055A    20
+000B    19
+029A    17
+101A    15
+097B    14
+063A    11
+010A     8
+013B     8
+023A     6
+108A     6
+053A     6
+044A     5
+025C     5
+070A     5
+026A     4
+012A     3
+069A     2
+025B     2
+038A     2
+076A     1
+096A     1
+043A     1
+041A     1
+004A     1
+088A     1
+115A     1
+024A     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+M    295
+X    208
+F    157
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+X    126
+F     88
+M     42
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 000A, 033A, 015A, 001A, 103A, 071A, 028...
+kitten    [014B, 111A, 040A, 047A, 109A, 050A, 049A, 045...
+senior    [093A, 097A, 106A, 104A, 059A, 113A, 116A, 051...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [097B, 101A, 029A, 023A, 063A, 038A, 013B, 070...
+kitten                       [044A, 046A, 043A, 041A, 115A]
+senior                             [057A, 055A, 108A, 024A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 54, 'kitten': 10, 'senior': 17}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 20, 'kitten': 5, 'senior': 4}
+Unique Training/Validation Group IDs:
+['000A' '001A' '002A' '002B' '003A' '005A' '006A' '007A' '008A' '009A'
+ '011A' '014A' '014B' '015A' '016A' '018A' '019A' '019B' '020A' '021A'
+ '022A' '023B' '025A' '026B' '026C' '027A' '028A' '031A' '032A' '033A'
+ '034A' '035A' '036A' '037A' '039A' '040A' '045A' '047A' '048A' '049A'
+ '050A' '051A' '051B' '052A' '054A' '056A' '058A' '059A' '060A' '061A'
+ '062A' '064A' '065A' '066A' '067A' '068A' '071A' '072A' '073A' '074A'
+ '075A' '087A' '090A' '091A' '092A' '093A' '094A' '095A' '097A' '099A'
+ '100A' '102A' '103A' '104A' '105A' '106A' '109A' '110A' '111A' '113A'
+ '116A']
+Unique Test Group IDs:
+['000B' '004A' '010A' '012A' '013B' '023A' '024A' '025B' '025C' '026A'
+ '029A' '038A' '041A' '043A' '044A' '046A' '053A' '055A' '057A' '063A'
+ '069A' '070A' '076A' '088A' '096A' '097B' '101A' '108A' '115A']
+Moved to Training/Validation Set:
+{'046A'}
+Removed from Training/Validation Set:
+{'047A'}
+Moved to Test Set:
+{'047A'}
+Removed from Test Set
+{'046A'}
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '001A' '002A' '002B' '003A' '005A' '006A' '007A' '008A' '009A'
+ '011A' '014A' '014B' '015A' '016A' '018A' '019A' '019B' '020A' '021A'
+ '022A' '023B' '025A' '026B' '026C' '027A' '028A' '031A' '032A' '033A'
+ '034A' '035A' '036A' '037A' '039A' '040A' '045A' '046A' '048A' '049A'
+ '050A' '051A' '051B' '052A' '054A' '056A' '058A' '059A' '060A' '061A'
+ '062A' '064A' '065A' '066A' '067A' '068A' '071A' '072A' '073A' '074A'
+ '075A' '087A' '090A' '091A' '092A' '093A' '094A' '095A' '097A' '099A'
+ '100A' '102A' '103A' '104A' '105A' '106A' '109A' '110A' '111A' '113A'
+ '116A']
+AFTER SWAP - Unique Test Group IDs:
+['000B' '004A' '010A' '012A' '013B' '023A' '024A' '025B' '025C' '026A'
+ '029A' '038A' '041A' '043A' '044A' '047A' '053A' '055A' '057A' '063A'
+ '069A' '070A' '076A' '088A' '096A' '097B' '101A' '108A' '115A']
+Length of X_train_val:
+695
+Length of y_train_val:
+695
+Length of groups_train_val:
+695
+Train Age Group Distribution BEFORE SWAP:
+adult     457
+senior    117
+kitten     86
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     131
+kitten     71
+senior     54
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     457
+kitten    121
+senior    117
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     131
+senior     54
+kitten     36
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.83 (24/29)
+Final Test Results - Loss: 0.907966136932373, Accuracy: 0.6696832776069641, Precision: 0.6655082742316786, Recall: 0.5917915370841579, F1 Score: 0.6183550027600625
+Confusion Matrix:
+ [[104   6  21]
+ [ 18  18   0]
+ [ 28   0  26]]
+outer_fold 3
+Train Set Group Distribution:
+046A    63
+000A    39
+047A    28
+057A    27
+074A    25
+055A    20
+067A    19
+000B    19
+029A    17
+097A    16
+101A    15
+097B    14
+106A    14
+059A    14
+002A    13
+111A    13
+116A    12
+039A    12
+036A    11
+063A    11
+005A    10
+016A    10
+045A     9
+015A     9
+072A     9
+022A     9
+033A     9
+013B     8
+010A     8
+094A     8
+099A     7
+031A     7
+050A     7
+023A     6
+008A     6
+053A     6
+007A     6
+108A     6
+109A     6
+021A     5
+075A     5
+034A     5
+044A     5
+025C     5
+070A     5
+035A     4
+026A     4
+062A     4
+105A     4
+003A     4
+052A     4
+009A     4
+012A     3
+060A     3
+113A     3
+014A     3
+058A     3
+064A     3
+025B     2
+061A     2
+102A     2
+011A     2
+054A     2
+069A     2
+018A     2
+093A     2
+038A     2
+026C     1
+090A     1
+100A     1
+110A     1
+091A     1
+115A     1
+088A     1
+041A     1
+004A     1
+076A     1
+048A     1
+066A     1
+096A     1
+043A     1
+024A     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+103A    33
+002B    32
+020A    23
+019A    17
+001A    14
+028A    13
+051A    12
+025A    11
+068A    11
+071A    10
+014B    10
+040A    10
+065A     9
+051B     9
+095A     8
+027A     7
+037A     6
+023B     5
+104A     4
+006A     3
+056A     3
+032A     2
+087A     2
+073A     1
+049A     1
+092A     1
+019B     1
+026B     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+X    262
+M    199
+F    196
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+M    138
+X     72
+F     49
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [000A, 033A, 015A, 097B, 074A, 067A, 062A, 101...
+kitten    [044A, 111A, 046A, 047A, 109A, 050A, 043A, 041...
+senior    [093A, 097A, 057A, 106A, 055A, 059A, 113A, 116...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [006A, 001A, 103A, 071A, 028A, 019A, 020A, 002...
+kitten                                   [014B, 040A, 049A]
+senior                             [104A, 051B, 056A, 051A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 53, 'kitten': 12, 'senior': 17}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 21, 'kitten': 3, 'senior': 4}
+Unique Training/Validation Group IDs:
+['000A' '000B' '002A' '003A' '004A' '005A' '007A' '008A' '009A' '010A'
+ '011A' '012A' '013B' '014A' '015A' '016A' '018A' '021A' '022A' '023A'
+ '024A' '025B' '025C' '026A' '026C' '029A' '031A' '033A' '034A' '035A'
+ '036A' '038A' '039A' '041A' '043A' '044A' '045A' '046A' '047A' '048A'
+ '050A' '052A' '053A' '054A' '055A' '057A' '058A' '059A' '060A' '061A'
+ '062A' '063A' '064A' '066A' '067A' '069A' '070A' '072A' '074A' '075A'
+ '076A' '088A' '090A' '091A' '093A' '094A' '096A' '097A' '097B' '099A'
+ '100A' '101A' '102A' '105A' '106A' '108A' '109A' '110A' '111A' '113A'
+ '115A' '116A']
+Unique Test Group IDs:
+['001A' '002B' '006A' '014B' '019A' '019B' '020A' '023B' '025A' '026B'
+ '027A' '028A' '032A' '037A' '040A' '049A' '051A' '051B' '056A' '065A'
+ '068A' '071A' '073A' '087A' '092A' '095A' '103A' '104A']
+Moved to Training/Validation Set:
+set()
+Removed from Training/Validation Set:
+set()
+Moved to Test Set:
+set()
+Removed from Test Set
+set()
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '002A' '003A' '004A' '005A' '007A' '008A' '009A' '010A'
+ '011A' '012A' '013B' '014A' '015A' '016A' '018A' '021A' '022A' '023A'
+ '024A' '025B' '025C' '026A' '026C' '029A' '031A' '033A' '034A' '035A'
+ '036A' '038A' '039A' '041A' '043A' '044A' '045A' '046A' '047A' '048A'
+ '050A' '052A' '053A' '054A' '055A' '057A' '058A' '059A' '060A' '061A'
+ '062A' '063A' '064A' '066A' '067A' '069A' '070A' '072A' '074A' '075A'
+ '076A' '088A' '090A' '091A' '093A' '094A' '096A' '097A' '097B' '099A'
+ '100A' '101A' '102A' '105A' '106A' '108A' '109A' '110A' '111A' '113A'
+ '115A' '116A']
+AFTER SWAP - Unique Test Group IDs:
+['001A' '002B' '006A' '014B' '019A' '019B' '020A' '023B' '025A' '026B'
+ '027A' '028A' '032A' '037A' '040A' '049A' '051A' '051B' '056A' '065A'
+ '068A' '071A' '073A' '087A' '092A' '095A' '103A' '104A']
+Length of X_train_val:
+657
+Length of y_train_val:
+657
+Length of groups_train_val:
+657
+Train Age Group Distribution BEFORE SWAP:
+adult     378
+senior    143
+kitten    136
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     210
+senior     28
+kitten     21
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     378
+senior    143
+kitten    136
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     210
+senior     28
+kitten     21
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.79 (22/28)
+Final Test Results - Loss: 0.8097008466720581, Accuracy: 0.7490347623825073, Precision: 0.6571665129042178, Recall: 0.6888888888888888, F1 Score: 0.660301693871086
+Confusion Matrix:
+ [[164   3  43]
+ [  3  18   0]
+ [ 16   0  12]]
+outer_fold 4
+Train Set Group Distribution:
+046A    63
+103A    33
+002B    32
+047A    28
+057A    27
+020A    23
+055A    20
+067A    19
+000B    19
+019A    17
+029A    17
+101A    15
+097B    14
+106A    14
+001A    14
+028A    13
+116A    12
+051A    12
+063A    11
+025A    11
+068A    11
+014B    10
+005A    10
+071A    10
+040A    10
+051B     9
+065A     9
+022A     9
+015A     9
+072A     9
+033A     9
+095A     8
+010A     8
+013B     8
+099A     7
+027A     7
+050A     7
+008A     6
+108A     6
+037A     6
+053A     6
+109A     6
+023A     6
+025C     5
+044A     5
+070A     5
+023B     5
+062A     4
+052A     4
+104A     4
+026A     4
+105A     4
+009A     4
+012A     3
+056A     3
+006A     3
+014A     3
+064A     3
+011A     2
+102A     2
+025B     2
+069A     2
+018A     2
+038A     2
+087A     2
+032A     2
+049A     1
+019B     1
+024A     1
+100A     1
+091A     1
+115A     1
+088A     1
+092A     1
+004A     1
+076A     1
+066A     1
+096A     1
+043A     1
+073A     1
+041A     1
+026B     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+000A    39
+074A    25
+097A    16
+059A    14
+111A    13
+002A    13
+039A    12
+036A    11
+016A    10
+045A     9
+094A     8
+031A     7
+007A     6
+075A     5
+034A     5
+021A     5
+003A     4
+035A     4
+058A     3
+060A     3
+113A     3
+093A     2
+054A     2
+061A     2
+026C     1
+048A     1
+110A     1
+090A     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+M    258
+X    255
+F    178
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+X    79
+M    79
+F    67
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 033A, 015A, 001A, 103A, 071A, 097B, 028...
+kitten    [044A, 014B, 040A, 046A, 047A, 109A, 050A, 043...
+senior    [057A, 106A, 104A, 055A, 116A, 051B, 056A, 051...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [000A, 074A, 034A, 002A, 039A, 007A, 021A, 031...
+kitten                             [111A, 045A, 048A, 110A]
+senior    [093A, 097A, 059A, 113A, 054A, 058A, 016A, 094...
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 60, 'kitten': 11, 'senior': 11}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 14, 'kitten': 4, 'senior': 10}
+Unique Training/Validation Group IDs:
+['000B' '001A' '002B' '004A' '005A' '006A' '008A' '009A' '010A' '011A'
+ '012A' '013B' '014A' '014B' '015A' '018A' '019A' '019B' '020A' '022A'
+ '023A' '023B' '024A' '025A' '025B' '025C' '026A' '026B' '027A' '028A'
+ '029A' '032A' '033A' '037A' '038A' '040A' '041A' '043A' '044A' '046A'
+ '047A' '049A' '050A' '051A' '051B' '052A' '053A' '055A' '056A' '057A'
+ '062A' '063A' '064A' '065A' '066A' '067A' '068A' '069A' '070A' '071A'
+ '072A' '073A' '076A' '087A' '088A' '091A' '092A' '095A' '096A' '097B'
+ '099A' '100A' '101A' '102A' '103A' '104A' '105A' '106A' '108A' '109A'
+ '115A' '116A']
+Unique Test Group IDs:
+['000A' '002A' '003A' '007A' '016A' '021A' '026C' '031A' '034A' '035A'
+ '036A' '039A' '045A' '048A' '054A' '058A' '059A' '060A' '061A' '074A'
+ '075A' '090A' '093A' '094A' '097A' '110A' '111A' '113A']
+Moved to Training/Validation Set:
+{'000A'}
+Removed from Training/Validation Set:
+{'053A'}
+Moved to Test Set:
+{'053A'}
+Removed from Test Set
+{'000A'}
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002B' '004A' '005A' '006A' '008A' '009A' '010A'
+ '011A' '012A' '013B' '014A' '014B' '015A' '018A' '019A' '019B' '020A'
+ '022A' '023A' '023B' '024A' '025A' '025B' '025C' '026A' '026B' '027A'
+ '028A' '029A' '032A' '033A' '037A' '038A' '040A' '041A' '043A' '044A'
+ '046A' '047A' '049A' '050A' '051A' '051B' '052A' '055A' '056A' '057A'
+ '062A' '063A' '064A' '065A' '066A' '067A' '068A' '069A' '070A' '071A'
+ '072A' '073A' '076A' '087A' '088A' '091A' '092A' '095A' '096A' '097B'
+ '099A' '100A' '101A' '102A' '103A' '104A' '105A' '106A' '108A' '109A'
+ '115A' '116A']
+AFTER SWAP - Unique Test Group IDs:
+['002A' '003A' '007A' '016A' '021A' '026C' '031A' '034A' '035A' '036A'
+ '039A' '045A' '048A' '053A' '054A' '058A' '059A' '060A' '061A' '074A'
+ '075A' '090A' '093A' '094A' '097A' '110A' '111A' '113A']
+Length of X_train_val:
+724
+Length of y_train_val:
+724
+Length of groups_train_val:
+724
+Train Age Group Distribution BEFORE SWAP:
+adult     448
+kitten    133
+senior    110
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     140
+senior     61
+kitten     24
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     481
+kitten    133
+senior    110
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     107
+senior     61
+kitten     24
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.57 (16/28)
+Final Test Results - Loss: 1.0076709985733032, Accuracy: 0.6822916865348816, Precision: 0.6983726150392817, Recall: 0.6921037400200875, F1 Score: 0.6776822958032733
+Confusion Matrix:
+ [[89  5 13]
+ [ 2 22  0]
+ [41  0 20]]
+
+Final Average F1-Score across all UNSEEN TEST sets: 0.6580176338873693
+
+Final Average Loss across all UNSEEN TEST sets: 0.8889781981706619
+
+Final Average Accuracy across all UNSEEN TEST sets: 0.7113319784402847
+
+Final Average Precision across all UNSEEN TEST sets: 0.6753813144132584
+
+Final Average Recall across all UNSEEN TEST sets: 0.6610743507887195
+
+Overall Majority Vote Accuracy for cat_id: 0.75 (81/108)
+outer_fold 1
+Train Set Group Distribution:
+046A    63
+000A    39
+103A    33
+002B    32
+047A    28
+074A    25
+000B    19
+019A    17
+097A    16
+101A    15
+097B    14
+059A    14
+002A    13
+028A    13
+051A    12
+039A    12
+116A    12
+025A    11
+068A    11
+036A    11
+063A    11
+014B    10
+071A    10
+005A    10
+065A     9
+022A     9
+051B     9
+033A     9
+095A     8
+010A     8
+094A     8
+013B     8
+027A     7
+099A     7
+050A     7
+031A     7
+008A     6
+023A     6
+037A     6
+108A     6
+034A     5
+075A     5
+023B     5
+021A     5
+070A     5
+035A     4
+009A     4
+052A     4
+104A     4
+003A     4
+026A     4
+062A     4
+113A     3
+056A     3
+014A     3
+058A     3
+064A     3
+060A     3
+102A     2
+011A     2
+038A     2
+025B     2
+061A     2
+093A     2
+054A     2
+087A     2
+069A     2
+018A     2
+032A     2
+100A     1
+115A     1
+024A     1
+019B     1
+090A     1
+096A     1
+088A     1
+066A     1
+026C     1
+041A     1
+092A     1
+049A     1
+073A     1
+076A     1
+091A     1
+026B     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+057A    27
+020A    23
+055A    20
+067A    19
+029A    17
+001A    14
+106A    14
+111A    13
+040A    10
+016A    10
+015A     9
+072A     9
+045A     9
+007A     6
+109A     6
+053A     6
+044A     5
+025C     5
+105A     4
+012A     3
+006A     3
+043A     1
+048A     1
+004A     1
+110A     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+X    252
+F    218
+M    210
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+M    127
+X     82
+F     27
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [000A, 033A, 103A, 071A, 097B, 028A, 019A, 074...
+kitten           [014B, 046A, 047A, 050A, 049A, 041A, 115A]
+senior    [093A, 097A, 104A, 059A, 113A, 116A, 051B, 054...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [006A, 015A, 001A, 067A, 020A, 029A, 072A, 007...
+kitten     [044A, 111A, 040A, 109A, 043A, 045A, 048A, 110A]
+senior                             [057A, 106A, 055A, 016A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 61, 'kitten': 7, 'senior': 17}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 13, 'kitten': 8, 'senior': 4}
+Unique Training/Validation Group IDs:
+['000A' '000B' '002A' '002B' '003A' '005A' '008A' '009A' '010A' '011A'
+ '013B' '014A' '014B' '018A' '019A' '019B' '021A' '022A' '023A' '023B'
+ '024A' '025A' '025B' '026A' '026B' '026C' '027A' '028A' '031A' '032A'
+ '033A' '034A' '035A' '036A' '037A' '038A' '039A' '041A' '046A' '047A'
+ '049A' '050A' '051A' '051B' '052A' '054A' '056A' '058A' '059A' '060A'
+ '061A' '062A' '063A' '064A' '065A' '066A' '068A' '069A' '070A' '071A'
+ '073A' '074A' '075A' '076A' '087A' '088A' '090A' '091A' '092A' '093A'
+ '094A' '095A' '096A' '097A' '097B' '099A' '100A' '101A' '102A' '103A'
+ '104A' '108A' '113A' '115A' '116A']
+Unique Test Group IDs:
+['001A' '004A' '006A' '007A' '012A' '015A' '016A' '020A' '025C' '029A'
+ '040A' '043A' '044A' '045A' '048A' '053A' '055A' '057A' '067A' '072A'
+ '105A' '106A' '109A' '110A' '111A']
+Moved to Training/Validation Set:
+set()
+Removed from Training/Validation Set:
+set()
+Moved to Test Set:
+set()
+Removed from Test Set
+set()
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '002A' '002B' '003A' '005A' '008A' '009A' '010A' '011A'
+ '013B' '014A' '014B' '018A' '019A' '019B' '021A' '022A' '023A' '023B'
+ '024A' '025A' '025B' '026A' '026B' '026C' '027A' '028A' '031A' '032A'
+ '033A' '034A' '035A' '036A' '037A' '038A' '039A' '041A' '046A' '047A'
+ '049A' '050A' '051A' '051B' '052A' '054A' '056A' '058A' '059A' '060A'
+ '061A' '062A' '063A' '064A' '065A' '066A' '068A' '069A' '070A' '071A'
+ '073A' '074A' '075A' '076A' '087A' '088A' '090A' '091A' '092A' '093A'
+ '094A' '095A' '096A' '097A' '097B' '099A' '100A' '101A' '102A' '103A'
+ '104A' '108A' '113A' '115A' '116A']
+AFTER SWAP - Unique Test Group IDs:
+['001A' '004A' '006A' '007A' '012A' '015A' '016A' '020A' '025C' '029A'
+ '040A' '043A' '044A' '045A' '048A' '053A' '055A' '057A' '067A' '072A'
+ '105A' '106A' '109A' '110A' '111A']
+Length of X_train_val:
+680
+Length of y_train_val:
+680
+Length of groups_train_val:
+680
+Train Age Group Distribution BEFORE SWAP:
+adult     469
+kitten    111
+senior    100
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     119
+senior     71
+kitten     46
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     469
+kitten    111
+senior    100
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     119
+senior     71
+kitten     46
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.72 (18/25)
+Final Test Results - Loss: 1.3532257080078125, Accuracy: 0.6694915294647217, Precision: 0.7307060755336616, Recall: 0.624015190889583, F1 Score: 0.6368112294733455
+Confusion Matrix:
+ [[108   0  11]
+ [ 11  34   1]
+ [ 55   0  16]]
+outer_fold 2
+Train Set Group Distribution:
+046A    63
+103A    33
+002B    32
+047A    28
+057A    27
+074A    25
+020A    23
+055A    20
+067A    19
+029A    17
+019A    17
+097A    16
+001A    14
+097B    14
+059A    14
+106A    14
+028A    13
+111A    13
+039A    12
+116A    12
+051A    12
+063A    11
+036A    11
+014B    10
+005A    10
+040A    10
+071A    10
+016A    10
+045A     9
+072A     9
+022A     9
+015A     9
+013B     8
+050A     7
+027A     7
+099A     7
+007A     6
+008A     6
+053A     6
+109A     6
+023A     6
+108A     6
+070A     5
+023B     5
+044A     5
+025C     5
+075A     5
+034A     5
+003A     4
+052A     4
+105A     4
+035A     4
+009A     4
+056A     3
+058A     3
+012A     3
+113A     3
+014A     3
+060A     3
+006A     3
+061A     2
+025B     2
+032A     2
+069A     2
+054A     2
+041A     1
+092A     1
+090A     1
+100A     1
+110A     1
+115A     1
+004A     1
+048A     1
+066A     1
+076A     1
+096A     1
+043A     1
+073A     1
+026C     1
+049A     1
+024A     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+000A    39
+000B    19
+101A    15
+002A    13
+025A    11
+068A    11
+033A     9
+065A     9
+051B     9
+095A     8
+010A     8
+094A     8
+031A     7
+037A     6
+021A     5
+062A     4
+026A     4
+104A     4
+064A     3
+102A     2
+011A     2
+093A     2
+018A     2
+087A     2
+038A     2
+088A     1
+019B     1
+091A     1
+026B     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+X    307
+M    281
+F    120
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+F    125
+M     56
+X     27
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 015A, 001A, 103A, 071A, 097B, 028A, 019...
+kitten    [044A, 014B, 111A, 040A, 046A, 047A, 109A, 050...
+senior    [097A, 057A, 106A, 055A, 059A, 113A, 116A, 054...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [000A, 033A, 062A, 101A, 095A, 065A, 091A, 002...
+senior                       [093A, 104A, 051B, 094A, 011A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 50, 'kitten': 15, 'senior': 16}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 24, 'senior': 5}
+Unique Training/Validation Group IDs:
+['001A' '002B' '003A' '004A' '005A' '006A' '007A' '008A' '009A' '012A'
+ '013B' '014A' '014B' '015A' '016A' '019A' '020A' '022A' '023A' '023B'
+ '024A' '025B' '025C' '026C' '027A' '028A' '029A' '032A' '034A' '035A'
+ '036A' '039A' '040A' '041A' '043A' '044A' '045A' '046A' '047A' '048A'
+ '049A' '050A' '051A' '052A' '053A' '054A' '055A' '056A' '057A' '058A'
+ '059A' '060A' '061A' '063A' '066A' '067A' '069A' '070A' '071A' '072A'
+ '073A' '074A' '075A' '076A' '090A' '092A' '096A' '097A' '097B' '099A'
+ '100A' '103A' '105A' '106A' '108A' '109A' '110A' '111A' '113A' '115A'
+ '116A']
+Unique Test Group IDs:
+['000A' '000B' '002A' '010A' '011A' '018A' '019B' '021A' '025A' '026A'
+ '026B' '031A' '033A' '037A' '038A' '051B' '062A' '064A' '065A' '068A'
+ '087A' '088A' '091A' '093A' '094A' '095A' '101A' '102A' '104A']
+Moved to Training/Validation Set:
+{'000A'}
+Removed from Training/Validation Set:
+{'067A'}
+Moved to Test Set:
+{'067A'}
+Removed from Test Set
+{'000A'}
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '001A' '002B' '003A' '004A' '005A' '006A' '007A' '008A' '009A'
+ '012A' '013B' '014A' '014B' '015A' '016A' '019A' '020A' '022A' '023A'
+ '023B' '024A' '025B' '025C' '026C' '027A' '028A' '029A' '032A' '034A'
+ '035A' '036A' '039A' '040A' '041A' '043A' '044A' '045A' '046A' '047A'
+ '048A' '049A' '050A' '051A' '052A' '053A' '054A' '055A' '056A' '057A'
+ '058A' '059A' '060A' '061A' '063A' '066A' '069A' '070A' '071A' '072A'
+ '073A' '074A' '075A' '076A' '090A' '092A' '096A' '097A' '097B' '099A'
+ '100A' '103A' '105A' '106A' '108A' '109A' '110A' '111A' '113A' '115A'
+ '116A']
+AFTER SWAP - Unique Test Group IDs:
+['000B' '002A' '010A' '011A' '018A' '019B' '021A' '025A' '026A' '026B'
+ '031A' '033A' '037A' '038A' '051B' '062A' '064A' '065A' '067A' '068A'
+ '087A' '088A' '091A' '093A' '094A' '095A' '101A' '102A' '104A']
+Length of X_train_val:
+728
+Length of y_train_val:
+728
+Length of groups_train_val:
+728
+Train Age Group Distribution BEFORE SWAP:
+adult     405
+kitten    157
+senior    146
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     183
+senior     25
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     425
+kitten    157
+senior    146
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     163
+senior     25
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.72 (21/29)
+Final Test Results - Loss: 0.6209347248077393, Accuracy: 0.7553191781044006, Precision: 0.42533490937746254, Recall: 0.4371370143149284, F1 Score: 0.42497123957434574
+Confusion Matrix:
+ [[129  11  23]
+ [  0   0   0]
+ [ 12   0  13]]
+outer_fold 3
+Train Set Group Distribution:
+000A    39
+103A    33
+002B    32
+057A    27
+020A    23
+055A    20
+000B    19
+067A    19
+019A    17
+029A    17
+101A    15
+001A    14
+097B    14
+106A    14
+002A    13
+028A    13
+111A    13
+051A    12
+039A    12
+025A    11
+068A    11
+014B    10
+016A    10
+040A    10
+072A     9
+015A     9
+033A     9
+045A     9
+051B     9
+065A     9
+094A     8
+095A     8
+013B     8
+010A     8
+031A     7
+050A     7
+027A     7
+053A     6
+109A     6
+007A     6
+108A     6
+008A     6
+037A     6
+070A     5
+021A     5
+025C     5
+044A     5
+009A     4
+062A     4
+035A     4
+026A     4
+105A     4
+104A     4
+012A     3
+060A     3
+064A     3
+006A     3
+056A     3
+014A     3
+058A     3
+061A     2
+018A     2
+093A     2
+069A     2
+087A     2
+038A     2
+025B     2
+011A     2
+102A     2
+073A     1
+100A     1
+110A     1
+091A     1
+048A     1
+019B     1
+088A     1
+004A     1
+066A     1
+096A     1
+092A     1
+043A     1
+026B     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+046A    63
+047A    28
+074A    25
+097A    16
+059A    14
+116A    12
+036A    11
+063A    11
+071A    10
+005A    10
+022A     9
+099A     7
+023A     6
+023B     5
+075A     5
+034A     5
+003A     4
+052A     4
+113A     3
+054A     2
+032A     2
+076A     1
+049A     1
+041A     1
+026C     1
+115A     1
+090A     1
+024A     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+M    266
+F    208
+X    183
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+X    151
+M     71
+F     37
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 000A, 033A, 015A, 001A, 103A, 097B, 028...
+kitten    [044A, 014B, 111A, 040A, 109A, 050A, 043A, 045...
+senior    [093A, 057A, 106A, 104A, 055A, 051B, 056A, 051...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [071A, 074A, 022A, 034A, 005A, 023A, 063A, 099...
+kitten                       [046A, 047A, 049A, 041A, 115A]
+senior           [097A, 059A, 113A, 116A, 054A, 090A, 024A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 58, 'kitten': 10, 'senior': 14}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 16, 'kitten': 5, 'senior': 7}
+Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002A' '002B' '004A' '006A' '007A' '008A' '009A'
+ '010A' '011A' '012A' '013B' '014A' '014B' '015A' '016A' '018A' '019A'
+ '019B' '020A' '021A' '025A' '025B' '025C' '026A' '026B' '027A' '028A'
+ '029A' '031A' '033A' '035A' '037A' '038A' '039A' '040A' '043A' '044A'
+ '045A' '048A' '050A' '051A' '051B' '053A' '055A' '056A' '057A' '058A'
+ '060A' '061A' '062A' '064A' '065A' '066A' '067A' '068A' '069A' '070A'
+ '072A' '073A' '087A' '088A' '091A' '092A' '093A' '094A' '095A' '096A'
+ '097B' '100A' '101A' '102A' '103A' '104A' '105A' '106A' '108A' '109A'
+ '110A' '111A']
+Unique Test Group IDs:
+['003A' '005A' '022A' '023A' '023B' '024A' '026C' '032A' '034A' '036A'
+ '041A' '046A' '047A' '049A' '052A' '054A' '059A' '063A' '071A' '074A'
+ '075A' '076A' '090A' '097A' '099A' '113A' '115A' '116A']
+Moved to Training/Validation Set:
+{'046A'}
+Removed from Training/Validation Set:
+{'045A'}
+Moved to Test Set:
+{'045A'}
+Removed from Test Set
+{'046A'}
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002A' '002B' '004A' '006A' '007A' '008A' '009A'
+ '010A' '011A' '012A' '013B' '014A' '014B' '015A' '016A' '018A' '019A'
+ '019B' '020A' '021A' '025A' '025B' '025C' '026A' '026B' '027A' '028A'
+ '029A' '031A' '033A' '035A' '037A' '038A' '039A' '040A' '043A' '044A'
+ '046A' '048A' '050A' '051A' '051B' '053A' '055A' '056A' '057A' '058A'
+ '060A' '061A' '062A' '064A' '065A' '066A' '067A' '068A' '069A' '070A'
+ '072A' '073A' '087A' '088A' '091A' '092A' '093A' '094A' '095A' '096A'
+ '097B' '100A' '101A' '102A' '103A' '104A' '105A' '106A' '108A' '109A'
+ '110A' '111A']
+AFTER SWAP - Unique Test Group IDs:
+['003A' '005A' '022A' '023A' '023B' '024A' '026C' '032A' '034A' '036A'
+ '041A' '045A' '047A' '049A' '052A' '054A' '059A' '063A' '071A' '074A'
+ '075A' '076A' '090A' '097A' '099A' '113A' '115A' '116A']
+Length of X_train_val:
+711
+Length of y_train_val:
+711
+Length of groups_train_val:
+711
+Train Age Group Distribution BEFORE SWAP:
+adult     472
+senior    122
+kitten     63
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     116
+kitten     94
+senior     49
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     472
+senior    122
+kitten    117
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     116
+senior     49
+kitten     40
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.75 (21/28)
+Final Test Results - Loss: 1.0017341375350952, Accuracy: 0.6585366129875183, Precision: 0.6853346058187286, Recall: 0.6346469622331692, F1 Score: 0.6406601848741587
+Confusion Matrix:
+ [[80  4 32]
+ [19 20  1]
+ [14  0 35]]
+outer_fold 4
+Train Set Group Distribution:
+046A    63
+000A    39
+047A    28
+057A    27
+074A    25
+020A    23
+055A    20
+000B    19
+067A    19
+029A    17
+097A    16
+101A    15
+059A    14
+106A    14
+001A    14
+111A    13
+002A    13
+116A    12
+068A    11
+025A    11
+036A    11
+063A    11
+040A    10
+005A    10
+016A    10
+071A    10
+015A     9
+051B     9
+033A     9
+022A     9
+045A     9
+065A     9
+072A     9
+010A     8
+095A     8
+094A     8
+031A     7
+099A     7
+109A     6
+037A     6
+007A     6
+053A     6
+023A     6
+021A     5
+034A     5
+044A     5
+023B     5
+075A     5
+025C     5
+026A     4
+104A     4
+105A     4
+062A     4
+003A     4
+052A     4
+012A     3
+064A     3
+006A     3
+113A     3
+011A     2
+054A     2
+093A     2
+032A     2
+087A     2
+038A     2
+018A     2
+102A     2
+019B     1
+024A     1
+090A     1
+110A     1
+115A     1
+091A     1
+043A     1
+088A     1
+004A     1
+048A     1
+026C     1
+041A     1
+049A     1
+076A     1
+026B     1
+Name: cat_id, dtype: int64
+Testing Set Group Distribution:
+103A    33
+002B    32
+019A    17
+097B    14
+028A    13
+039A    12
+051A    12
+014B    10
+013B     8
+050A     7
+027A     7
+008A     6
+108A     6
+070A     5
+009A     4
+035A     4
+056A     3
+058A     3
+014A     3
+060A     3
+069A     2
+061A     2
+025B     2
+096A     1
+073A     1
+092A     1
+066A     1
+100A     1
+Name: cat_id, dtype: int64
+Training Set Gender Distribution BEFORE SWAP:
+X    260
+M    254
+F    189
+Name: gender, dtype: int64
+Testing Set Gender Distribution BEFORE SWAP:
+M    83
+X    74
+F    56
+Name: gender, dtype: int64
+Unique Cat IDs per Age Group in Training/Validation Set:
+age_group
+adult     [006A, 000A, 033A, 015A, 001A, 071A, 074A, 067...
+kitten    [044A, 111A, 040A, 046A, 047A, 109A, 043A, 049...
+senior    [093A, 097A, 057A, 106A, 104A, 055A, 059A, 113...
+Name: cat_id, dtype: object
+Unique Cat IDs per Age Group in Testing Set:
+age_group
+adult     [103A, 097B, 028A, 019A, 002B, 039A, 009A, 027...
+kitten                                         [014B, 050A]
+senior                       [056A, 051A, 058A, 108A, 061A]
+Name: cat_id, dtype: object
+Count of Unique Cat IDs per Age Group in Training/Validation Set:
+{'adult': 53, 'kitten': 13, 'senior': 16}
+Count of Unique Cat IDs per Age Group in Testing Set:
+{'adult': 21, 'kitten': 2, 'senior': 5}
+Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002A' '003A' '004A' '005A' '006A' '007A' '010A'
+ '011A' '012A' '015A' '016A' '018A' '019B' '020A' '021A' '022A' '023A'
+ '023B' '024A' '025A' '025C' '026A' '026B' '026C' '029A' '031A' '032A'
+ '033A' '034A' '036A' '037A' '038A' '040A' '041A' '043A' '044A' '045A'
+ '046A' '047A' '048A' '049A' '051B' '052A' '053A' '054A' '055A' '057A'
+ '059A' '062A' '063A' '064A' '065A' '067A' '068A' '071A' '072A' '074A'
+ '075A' '076A' '087A' '088A' '090A' '091A' '093A' '094A' '095A' '097A'
+ '099A' '101A' '102A' '104A' '105A' '106A' '109A' '110A' '111A' '113A'
+ '115A' '116A']
+Unique Test Group IDs:
+['002B' '008A' '009A' '013B' '014A' '014B' '019A' '025B' '027A' '028A'
+ '035A' '039A' '050A' '051A' '056A' '058A' '060A' '061A' '066A' '069A'
+ '070A' '073A' '092A' '096A' '097B' '100A' '103A' '108A']
+Moved to Training/Validation Set:
+set()
+Removed from Training/Validation Set:
+set()
+Moved to Test Set:
+set()
+Removed from Test Set
+set()
+AFTER SWAP - Unique Training/Validation Group IDs:
+['000A' '000B' '001A' '002A' '003A' '004A' '005A' '006A' '007A' '010A'
+ '011A' '012A' '015A' '016A' '018A' '019B' '020A' '021A' '022A' '023A'
+ '023B' '024A' '025A' '025C' '026A' '026B' '026C' '029A' '031A' '032A'
+ '033A' '034A' '036A' '037A' '038A' '040A' '041A' '043A' '044A' '045A'
+ '046A' '047A' '048A' '049A' '051B' '052A' '053A' '054A' '055A' '057A'
+ '059A' '062A' '063A' '064A' '065A' '067A' '068A' '071A' '072A' '074A'
+ '075A' '076A' '087A' '088A' '090A' '091A' '093A' '094A' '095A' '097A'
+ '099A' '101A' '102A' '104A' '105A' '106A' '109A' '110A' '111A' '113A'
+ '115A' '116A']
+AFTER SWAP - Unique Test Group IDs:
+['002B' '008A' '009A' '013B' '014A' '014B' '019A' '025B' '027A' '028A'
+ '035A' '039A' '050A' '051A' '056A' '058A' '060A' '061A' '066A' '069A'
+ '070A' '073A' '092A' '096A' '097B' '100A' '103A' '108A']
+Length of X_train_val:
+703
+Length of y_train_val:
+703
+Length of groups_train_val:
+703
+Train Age Group Distribution BEFORE SWAP:
+adult     418
+senior    145
+kitten    140
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution BEFORE SWAP:
+adult     170
+senior     26
+kitten     17
+Name: age_group, dtype: int64
+Train Age Group Distribution AFTER SWAP:
+adult     418
+senior    145
+kitten    140
+Name: age_group, dtype: int64
+Testing Set Age Group Distribution AFTER SWAP:
+adult     170
+senior     26
+kitten     17
+Name: age_group, dtype: int64
+
+ Starting training on unseen test set
+
+Majority Vote Accuracy for cat_id for this fold: 0.79 (22/28)
+Final Test Results - Loss: 1.1248173713684082, Accuracy: 0.7183098793029785, Precision: 0.5566994260342213, Recall: 0.5796380090497738, F1 Score: 0.5668343873578605
+Confusion Matrix:
+ [[136   5  29]
+ [  3  14   0]
+ [ 23   0   3]]
+
+Final Average F1-Score across all UNSEEN TEST sets: 0.5673192603199275
+
+Final Average Loss across all UNSEEN TEST sets: 1.0251779854297638
+
+Final Average Accuracy across all UNSEEN TEST sets: 0.7004142999649048
+
+Final Average Precision across all UNSEEN TEST sets: 0.5995187541910185
+
+Final Average Recall across all UNSEEN TEST sets: 0.5688592941218636
+
+Overall Majority Vote Accuracy for cat_id: 0.74 (80/108)
