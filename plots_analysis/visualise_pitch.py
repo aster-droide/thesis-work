@@ -6,7 +6,7 @@ import numpy as np
 
 
 # Load the CSV file
-df = pd.read_csv('/Users/astrid/PycharmProjects/data-aug-and-more/crepe-pitch-may-24.csv')
+df = pd.read_csv('/Users/astrid/PycharmProjects/thesis-work/plots_analysis/crepe_pitch_may-24.csv')
 
 # Sort the DataFrame by age
 df.sort_values(by='Age', inplace=True)

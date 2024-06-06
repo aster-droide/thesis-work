@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Load the CSV file into a pandas DataFrame
 # Replace 'your_file_path.csv' with the path to your CSV file
-df = pd.read_csv('/Users/astrid/PycharmProjects/data-aug-and-more/crepe-pitch-may-24.csv')
+df = pd.read_csv('/Users/astrid/PycharmProjects/thesis-work/plots_analysis/crepe_pitch_may-24.csv')
 
 def assign_age_group(age, age_groups):
     for group_name, age_range in age_groups.items():
@@ -40,7 +40,7 @@ for age_group, color in age_group_colors.items():
     plt.scatter(subset.index, subset['Mean F0'], s=100, c=color, label=age_group)
 
 plt.title('Mean Frequency by Age Group')
-plt.xlabel('Index')
+plt.xlabel('Sample')
 plt.ylabel('Mean Frequency (Hz)')
 plt.legend(title="Age Group")
 plt.grid(True)
