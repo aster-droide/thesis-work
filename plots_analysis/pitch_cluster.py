@@ -39,9 +39,9 @@ for age_group, color in age_group_colors.items():
     subset = df[df['age_group'] == age_group]
     plt.scatter(subset.index, subset['Mean F0'], s=100, c=color, label=age_group)
 
-plt.title('Mean Frequency by Age Group')
+plt.title('Fundamental Frequency (F0) by Age Group')
 plt.xlabel('Sample')
-plt.ylabel('Mean Frequency (Hz)')
+plt.ylabel('Mean F0 (Hz)')
 plt.legend(title="Age Group")
 plt.grid(True)
 
