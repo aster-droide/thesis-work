@@ -1,0 +1,3 @@
+## Working directory for _"A WHISKER OF TRUTH: A DEEP LEARNING PIPELINE FOR AGE PREDICTION FROM VOCALISATIONS IN THE DOMESTIC FELINE"_
+
+Top results & analysis can be accessed from the "TOP-RESULT-NOTEBOOKS" folder
